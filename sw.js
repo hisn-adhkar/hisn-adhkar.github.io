@@ -1,4 +1,4 @@
-const V="hisn-v13";
+const V="hisn-v22";
 const CORE=["./","index.html","manifest.webmanifest","icon.png","apple-touch-icon.png"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==V&&x!=="hisn-q").map(x=>caches.delete(x)))).then(()=>self.clients.claim()))});
@@ -10,7 +10,7 @@ self.addEventListener("fetch",e=>{
   const font=u.hostname==="fonts.googleapis.com"||u.hostname==="fonts.gstatic.com";
   if(u.origin!==location.origin&&!font)return;
   e.respondWith((async()=>{
-    const cache=await caches.open(V);
+    const cache=await caches.open(/quran\.json$/.test(u.pathname)?"hisn-q":V);
     const hit=await cache.match(r,{ignoreSearch:true});
     const net=fetch(r).then(res=>{if(res&&(res.ok||res.type==="opaque"))cache.put(r,res.clone());return res}).catch(()=>null);
     if(hit){e.waitUntil(net);return hit}
