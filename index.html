@@ -539,29 +539,16 @@ body.qpb #qnv{display:none}
 .qnv input[type=number]{-moz-appearance:textfield;appearance:textfield}
 .qnv input::-webkit-outer-spin-button,.qnv input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 
-/* v22: تظليل رفيع بلا مستطيل + ألوان مريحة للقراءة */
-.ay,.ay.sel,.ay.pl{padding:0!important;border-radius:0!important;box-shadow:none!important;-webkit-box-decoration-break:clone;box-decoration-break:clone;background:none}
-.ay.sel{background:linear-gradient(rgba(201,162,74,.38),rgba(201,162,74,.38)) center/100% 56% no-repeat!important}
-.ay.pl{background:linear-gradient(rgba(31,160,130,.34),rgba(31,160,130,.34)) center/100% 56% no-repeat!important}
+/* v23: صفحة بيضاء ونص أسود دائمًا + تحديد بخط تحت الآية */
+.ay,.ay.sel,.ay.pl{padding:0!important;border-radius:0!important;box-shadow:none!important;background:none!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ay.sel{text-decoration:underline dotted;text-decoration-color:#b8860b;text-decoration-thickness:2px;text-underline-offset:.5em;text-decoration-skip-ink:none}
+.ay.pl{text-decoration:underline solid;text-decoration-color:#0a8f6a;text-decoration-thickness:3px;text-underline-offset:.5em;text-decoration-skip-ink:none}
 .en{line-height:1;font-size:.85em}
-#qpg{background:#fffaf0!important;border-color:#d8c48a!important;--ink:#161616}
-#qpg .qt{color:#161616}
-#qpg .sb{background:#e9f3ec;color:#0b5a4a;border-color:#c9a24a}
-#qpg .bs{color:#161616}
-#qpg .en{color:#a9801f}
-:root[data-theme="dark"] #qpg{background:#0f1a17!important;border-color:#3a5a4f!important}
-:root[data-theme="dark"] #qpg .qt,:root[data-theme="dark"] #qpg .bs{color:#f3ead2}
-:root[data-theme="dark"] #qpg .sb{background:#17302a;color:#f4dd9c}
-:root[data-theme="dark"] #qpg .en{color:#e0b84c}
-:root[data-theme="dark"] .ay.sel{background:linear-gradient(rgba(244,221,156,.26),rgba(244,221,156,.26)) center/100% 56% no-repeat!important}
-:root[data-theme="dark"] .ay.pl{background:linear-gradient(rgba(255,255,255,.22),rgba(255,255,255,.22)) center/100% 56% no-repeat!important}
-@media (prefers-color-scheme:dark){
-:root:not([data-theme="light"]) #qpg{background:#0f1a17!important;border-color:#3a5a4f!important}
-:root:not([data-theme="light"]) #qpg .qt,:root:not([data-theme="light"]) #qpg .bs{color:#f3ead2}
-:root:not([data-theme="light"]) #qpg .sb{background:#17302a;color:#f4dd9c}
-:root:not([data-theme="light"]) #qpg .en{color:#e0b84c}
-:root:not([data-theme="light"]) .ay.sel{background:linear-gradient(rgba(244,221,156,.26),rgba(244,221,156,.26)) center/100% 56% no-repeat!important}
-:root:not([data-theme="light"]) .ay.pl{background:linear-gradient(rgba(255,255,255,.22),rgba(255,255,255,.22)) center/100% 56% no-repeat!important}}
+#qpg,:root[data-theme] #qpg,:root:not([data-theme="light"]) #qpg{background:#fff!important;border-color:#d8c48a!important;outline-color:#c9a24a!important}
+#qpg .qt,#qpg .bs,:root[data-theme] #qpg .qt,:root[data-theme] #qpg .bs,:root:not([data-theme="light"]) #qpg .qt,:root:not([data-theme="light"]) #qpg .bs{color:#000!important}
+#qpg .sb,:root[data-theme] #qpg .sb,:root:not([data-theme="light"]) #qpg .sb{background:#eef6f0!important;color:#0b5a4a!important;border-color:#c9a24a!important}
+#qpg .en,:root[data-theme] #qpg .en,:root:not([data-theme="light"]) #qpg .en{color:#8a6414!important}
+#qpg .qt{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important}
 </style>
 </head>
 <body>
