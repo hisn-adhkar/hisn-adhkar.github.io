@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src https://cdn.mp3quran.net https://everyayah.com; connect-src 'self' https://api.aladhan.com; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src https://cdn.mp3quran.net; connect-src 'self' https://api.aladhan.com https://mp3quran.net https://www.mp3quran.net; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>🌿 حصن الأذكار | رفيقك في الذكر</title>
@@ -627,6 +627,48 @@ body.qpb #qnv{display:none}
 .qfp .qpc .sk small{font-size:.65rem;font-weight:700}
 .qfp .qsk{display:block;width:100%;margin:10px 0 2px;direction:ltr;accent-color:#f4dd9c;height:20px}
 .qtt{bottom:calc(92px + env(safe-area-inset-bottom,0px))!important}
+
+/* v26: تظليل بمقاس الآية، بطاقة الآية المكبّرة */
+#qpg .ay.ply,:root[data-theme] #qpg .ay.ply,:root:not([data-theme="light"]) #qpg .ay.ply{background:linear-gradient(rgba(70,95,130,.2),rgba(70,95,130,.2)) no-repeat 0 55%/100% 62%!important;box-shadow:none!important;border-radius:0!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#qpg .ay.sel,:root[data-theme] #qpg .ay.sel,:root:not([data-theme="light"]) #qpg .ay.sel{background:linear-gradient(rgba(201,162,74,.32),rgba(201,162,74,.32)) no-repeat 0 55%/100% 62%!important;box-shadow:none!important;border-radius:0!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.qsb{background:rgba(0,0,0,.28)!important}
+.qshb{max-height:76vh;overflow-y:auto;padding-top:8px!important}
+.qgrip{width:42px;height:5px;border-radius:3px;background:var(--line);margin:0 auto 8px}
+.qsh2{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.qsh2 h3{margin:0!important;text-align:right!important;font-size:1.1rem!important}
+.qdn{flex:none;padding:7px 14px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--pri);font:700 .85rem Tajawal,sans-serif;cursor:pointer}
+.qsa{direction:rtl;text-align:center;font-family:"Amiri Quran",Amiri,serif;font-size:clamp(1.5rem,6.4vw,2.05rem);line-height:2.2;color:var(--ink);padding:10px 4px 12px;max-height:30vh;overflow-y:auto}
+.qsa .en{display:inline-block;box-sizing:border-box;font:700 .45em Tajawal,sans-serif;min-width:2.3em;height:2.3em;line-height:2.15em;text-align:center;padding:0 .3em;margin:0 .4em;vertical-align:.3em;border:.1em solid #2b7a9b;border-radius:50%;background:#eaf4f8;color:#1d5d7a}
+.qshb .rw .qpn{flex:none;min-width:74px;padding:13px 8px;font-size:.9rem}
+
+/* v27: تظليل بمقاس السطر بالضبط، بطاقة الآية بنمط التطبيقات الحديثة */
+#qpg .ay.ply,:root[data-theme] #qpg .ay.ply,:root:not([data-theme="light"]) #qpg .ay.ply{background:linear-gradient(rgba(78,104,140,.2),rgba(78,104,140,.2)) no-repeat 0 50%/100% calc(var(--lh,2)*1em - .12em)!important;box-shadow:none!important;border-radius:0!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+#qpg .ay.sel,:root[data-theme] #qpg .ay.sel,:root:not([data-theme="light"]) #qpg .ay.sel{background:linear-gradient(rgba(201,162,74,.3),rgba(201,162,74,.3)) no-repeat 0 50%/100% calc(var(--lh,2)*1em - .12em)!important;box-shadow:none!important;border-radius:0!important;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+body.qsho .qfab{display:none!important}
+.qsb{background:rgba(0,0,0,.22)!important}
+.qshb{background:rgba(243,247,251,.98)!important;color:#24445f!important;border-top:0!important;border-radius:28px 28px 0 0!important;box-shadow:0 -10px 40px rgba(0,0,0,.25);max-height:82vh;padding:8px 18px calc(16px + env(safe-area-inset-bottom,0px))!important}
+.qgrip{background:#b9c4d0!important}
+.qsh2 h3{font:700 1.05rem Tajawal,sans-serif!important;color:#24445f!important}
+.qdn{width:42px;height:34px;padding:0!important;border-radius:17px!important;background:#e3eaf2!important;border:0!important;color:#24445f!important;font-size:1.2rem!important}
+.qsa{color:#2d4a63!important;font-size:clamp(1.55rem,6.8vw,2.15rem)!important;line-height:2.25!important;max-height:34vh}
+.qsn{text-align:center;color:#5d7389!important;font:500 .78rem Tajawal,sans-serif;margin:0 0 4px;min-height:1.2em}
+.qctr{display:flex;direction:ltr;justify-content:center;align-items:center;gap:26px;margin:6px 0 12px;padding:10px 14px;border-radius:32px;background:rgba(110,145,185,.17)}
+.qctr .cb{width:46px;height:46px;border-radius:50%;border:0;background:transparent;color:#1f6fb2;font-size:1.25rem;cursor:pointer;letter-spacing:-3px;padding:0}
+.qctr .cp{width:66px;height:66px;border-radius:50%;border:0;background:#fff;color:#0b5a4a;font-size:1.6rem;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.18);padding:0}
+.qshb .lbl{color:#5d7389!important}
+.qshb .chip{background:#fff;border:1px solid #d3dde8;color:#24445f}
+.qshb .chip.on{background:#1f6fb2;color:#fff;border-color:#1f6fb2}
+.qshb .qchk{background:#fff;border:1.5px solid #d3dde8;color:#5d7389}
+.qshb .qchk.on{border-color:#1f6fb2;color:#1f6fb2;background:#eef5fc}
+.qshb .qchk.on i{background:#1f6fb2;border-color:#1f6fb2}
+.qshb .rrow label{color:#24445f}
+.qshb .rrow select{background:#fff;color:#24445f;border:1px solid #d3dde8}
+
+/* v29: تظليل مرسوم بالمستطيلات (مثل التطبيقات الحديثة) */
+#qpg .ay,#qpg .ay.ply,#qpg .ay.sel,:root[data-theme] #qpg .ay,:root[data-theme] #qpg .ay.ply,:root:not([data-theme="light"]) #qpg .ay,:root:not([data-theme="light"]) #qpg .ay.ply{background:none!important;box-shadow:none!important;text-decoration:none!important}
+#qpg .qt{position:relative;isolation:isolate}
+#qpg .hlr{position:absolute;z-index:-1;border-radius:8px;background:rgba(72,100,140,.2);pointer-events:none}
+.qver{display:block;text-align:center;color:var(--mut);font:500 .62rem Tajawal,sans-serif;opacity:.7;margin:2px 0 8px}
 </style>
 </head>
 <body>
@@ -635,7 +677,7 @@ body.qpb #qnv{display:none}
 <div id="qidx"><button type="button" id="qres" class="qres" hidden></button>
 <div class="qtools"><button type="button" id="qkb" class="qtile"><span class="qti">📅</span><b>ختمتي</b><small id="qks"></small></button></div>
 <div class="qsw"><input id="qs" type="search" placeholder="اكتب اسم السورة أو رقم الصفحة (مثال: الكهف أو ٥٢)" autocomplete="off" enterkeyhint="go" aria-label="بحث عن سورة"><button type="button" id="qgo">اذهب</button></div>
-<div class="qrc"><label for="qrec" title="القارئ">🎙️</label><select id="qrec" aria-label="القارئ"></select><select id="qjz" aria-label="الجزء"><option value="">الجزء…</option></select></div><div class="qnt" id="qin" hidden>الشيخ إدريس أبكر يُستمع له بالسورة كاملة فقط: اضغط على السورة لتبدأ التلاوة. للاستماع آية آية اختر قارئًا آخر.</div>
+<div class="qrc"><label for="qrec" title="القارئ">🎙️</label><select id="qrec" aria-label="القارئ"></select><select id="qjz" aria-label="الجزء"><option value="">الجزء…</option></select></div>
 <div class="qnt" id="qno" hidden>لا توجد سورة بهذا الاسم</div><div class="qsl" id="qsl"><button type="button" class="sr" data-s="1" data-n="الفاتحة" data-nm="الفاتحه" data-c="7"><span class="nb2">١</span><span><b>الفاتحة</b><small>مكية · ٧ آية · صفحة ١</small></span></button><button type="button" class="sr" data-s="2" data-n="البقرة" data-nm="البقره" data-c="286"><span class="nb2">٢</span><span><b>البقرة</b><small>مدنية · ٢٨٦ آية · صفحة ٢</small></span></button><button type="button" class="sr" data-s="3" data-n="آل عمران" data-nm="ال عمران" data-c="200"><span class="nb2">٣</span><span><b>آل عمران</b><small>مدنية · ٢٠٠ آية · صفحة ٥٠</small></span></button><button type="button" class="sr" data-s="4" data-n="النساء" data-nm="النساء" data-c="176"><span class="nb2">٤</span><span><b>النساء</b><small>مدنية · ١٧٦ آية · صفحة ٧٧</small></span></button><button type="button" class="sr" data-s="5" data-n="المائدة" data-nm="المائده" data-c="120"><span class="nb2">٥</span><span><b>المائدة</b><small>مدنية · ١٢٠ آية · صفحة ١٠٦</small></span></button><button type="button" class="sr" data-s="6" data-n="الأنعام" data-nm="الانعام" data-c="165"><span class="nb2">٦</span><span><b>الأنعام</b><small>مكية · ١٦٥ آية · صفحة ١٢٨</small></span></button><button type="button" class="sr" data-s="7" data-n="الأعراف" data-nm="الاعراف" data-c="206"><span class="nb2">٧</span><span><b>الأعراف</b><small>مكية · ٢٠٦ آية · صفحة ١٥١</small></span></button><button type="button" class="sr" data-s="8" data-n="الأنفال" data-nm="الانفال" data-c="75"><span class="nb2">٨</span><span><b>الأنفال</b><small>مدنية · ٧٥ آية · صفحة ١٧٧</small></span></button><button type="button" class="sr" data-s="9" data-n="التوبة" data-nm="التوبه" data-c="129"><span class="nb2">٩</span><span><b>التوبة</b><small>مدنية · ١٢٩ آية · صفحة ١٨٧</small></span></button><button type="button" class="sr" data-s="10" data-n="يونس" data-nm="يونس" data-c="109"><span class="nb2">١٠</span><span><b>يونس</b><small>مكية · ١٠٩ آية · صفحة ٢٠٨</small></span></button><button type="button" class="sr" data-s="11" data-n="هود" data-nm="هود" data-c="123"><span class="nb2">١١</span><span><b>هود</b><small>مكية · ١٢٣ آية · صفحة ٢٢١</small></span></button><button type="button" class="sr" data-s="12" data-n="يوسف" data-nm="يوسف" data-c="111"><span class="nb2">١٢</span><span><b>يوسف</b><small>مكية · ١١١ آية · صفحة ٢٣٥</small></span></button><button type="button" class="sr" data-s="13" data-n="الرعد" data-nm="الرعد" data-c="43"><span class="nb2">١٣</span><span><b>الرعد</b><small>مدنية · ٤٣ آية · صفحة ٢٤٩</small></span></button><button type="button" class="sr" data-s="14" data-n="إبراهيم" data-nm="ابراهيم" data-c="52"><span class="nb2">١٤</span><span><b>إبراهيم</b><small>مكية · ٥٢ آية · صفحة ٢٥٥</small></span></button><button type="button" class="sr" data-s="15" data-n="الحجر" data-nm="الحجر" data-c="99"><span class="nb2">١٥</span><span><b>الحجر</b><small>مكية · ٩٩ آية · صفحة ٢٦٢</small></span></button><button type="button" class="sr" data-s="16" data-n="النحل" data-nm="النحل" data-c="128"><span class="nb2">١٦</span><span><b>النحل</b><small>مكية · ١٢٨ آية · صفحة ٢٦٧</small></span></button><button type="button" class="sr" data-s="17" data-n="الإسراء" data-nm="الاسراء" data-c="111"><span class="nb2">١٧</span><span><b>الإسراء</b><small>مكية · ١١١ آية · صفحة ٢٨٢</small></span></button><button type="button" class="sr" data-s="18" data-n="الكهف" data-nm="الكهف" data-c="110"><span class="nb2">١٨</span><span><b>الكهف</b><small>مكية · ١١٠ آية · صفحة ٢٩٣</small></span></button><button type="button" class="sr" data-s="19" data-n="مريم" data-nm="مريم" data-c="98"><span class="nb2">١٩</span><span><b>مريم</b><small>مكية · ٩٨ آية · صفحة ٣٠٥</small></span></button><button type="button" class="sr" data-s="20" data-n="طه" data-nm="طه" data-c="135"><span class="nb2">٢٠</span><span><b>طه</b><small>مكية · ١٣٥ آية · صفحة ٣١٢</small></span></button><button type="button" class="sr" data-s="21" data-n="الأنبياء" data-nm="الانبياء" data-c="112"><span class="nb2">٢١</span><span><b>الأنبياء</b><small>مكية · ١١٢ آية · صفحة ٣٢٢</small></span></button><button type="button" class="sr" data-s="22" data-n="الحج" data-nm="الحج" data-c="78"><span class="nb2">٢٢</span><span><b>الحج</b><small>مدنية · ٧٨ آية · صفحة ٣٣٢</small></span></button><button type="button" class="sr" data-s="23" data-n="المؤمنون" data-nm="المؤمنون" data-c="118"><span class="nb2">٢٣</span><span><b>المؤمنون</b><small>مكية · ١١٨ آية · صفحة ٣٤٢</small></span></button><button type="button" class="sr" data-s="24" data-n="النور" data-nm="النور" data-c="64"><span class="nb2">٢٤</span><span><b>النور</b><small>مدنية · ٦٤ آية · صفحة ٣٥٠</small></span></button><button type="button" class="sr" data-s="25" data-n="الفرقان" data-nm="الفرقان" data-c="77"><span class="nb2">٢٥</span><span><b>الفرقان</b><small>مكية · ٧٧ آية · صفحة ٣٥٩</small></span></button><button type="button" class="sr" data-s="26" data-n="الشعراء" data-nm="الشعراء" data-c="227"><span class="nb2">٢٦</span><span><b>الشعراء</b><small>مكية · ٢٢٧ آية · صفحة ٣٦٧</small></span></button><button type="button" class="sr" data-s="27" data-n="النمل" data-nm="النمل" data-c="93"><span class="nb2">٢٧</span><span><b>النمل</b><small>مكية · ٩٣ آية · صفحة ٣٧٧</small></span></button><button type="button" class="sr" data-s="28" data-n="القصص" data-nm="القصص" data-c="88"><span class="nb2">٢٨</span><span><b>القصص</b><small>مكية · ٨٨ آية · صفحة ٣٨٥</small></span></button><button type="button" class="sr" data-s="29" data-n="العنكبوت" data-nm="العنكبوت" data-c="69"><span class="nb2">٢٩</span><span><b>العنكبوت</b><small>مكية · ٦٩ آية · صفحة ٣٩٦</small></span></button><button type="button" class="sr" data-s="30" data-n="الروم" data-nm="الروم" data-c="60"><span class="nb2">٣٠</span><span><b>الروم</b><small>مكية · ٦٠ آية · صفحة ٤٠٤</small></span></button><button type="button" class="sr" data-s="31" data-n="لقمان" data-nm="لقمان" data-c="34"><span class="nb2">٣١</span><span><b>لقمان</b><small>مكية · ٣٤ آية · صفحة ٤١١</small></span></button><button type="button" class="sr" data-s="32" data-n="السجدة" data-nm="السجده" data-c="30"><span class="nb2">٣٢</span><span><b>السجدة</b><small>مكية · ٣٠ آية · صفحة ٤١٥</small></span></button><button type="button" class="sr" data-s="33" data-n="الأحزاب" data-nm="الاحزاب" data-c="73"><span class="nb2">٣٣</span><span><b>الأحزاب</b><small>مدنية · ٧٣ آية · صفحة ٤١٨</small></span></button><button type="button" class="sr" data-s="34" data-n="سبأ" data-nm="سبا" data-c="54"><span class="nb2">٣٤</span><span><b>سبأ</b><small>مكية · ٥٤ آية · صفحة ٤٢٨</small></span></button><button type="button" class="sr" data-s="35" data-n="فاطر" data-nm="فاطر" data-c="45"><span class="nb2">٣٥</span><span><b>فاطر</b><small>مكية · ٤٥ آية · صفحة ٤٣٤</small></span></button><button type="button" class="sr" data-s="36" data-n="يس" data-nm="يس" data-c="83"><span class="nb2">٣٦</span><span><b>يس</b><small>مكية · ٨٣ آية · صفحة ٤٤٠</small></span></button><button type="button" class="sr" data-s="37" data-n="الصافات" data-nm="الصافات" data-c="182"><span class="nb2">٣٧</span><span><b>الصافات</b><small>مكية · ١٨٢ آية · صفحة ٤٤٦</small></span></button><button type="button" class="sr" data-s="38" data-n="ص" data-nm="ص" data-c="88"><span class="nb2">٣٨</span><span><b>ص</b><small>مكية · ٨٨ آية · صفحة ٤٥٣</small></span></button><button type="button" class="sr" data-s="39" data-n="الزمر" data-nm="الزمر" data-c="75"><span class="nb2">٣٩</span><span><b>الزمر</b><small>مكية · ٧٥ آية · صفحة ٤٥٨</small></span></button><button type="button" class="sr" data-s="40" data-n="غافر" data-nm="غافر" data-c="85"><span class="nb2">٤٠</span><span><b>غافر</b><small>مكية · ٨٥ آية · صفحة ٤٦٧</small></span></button><button type="button" class="sr" data-s="41" data-n="فصلت" data-nm="فصلت" data-c="54"><span class="nb2">٤١</span><span><b>فصلت</b><small>مكية · ٥٤ آية · صفحة ٤٧٧</small></span></button><button type="button" class="sr" data-s="42" data-n="الشورى" data-nm="الشوري" data-c="53"><span class="nb2">٤٢</span><span><b>الشورى</b><small>مكية · ٥٣ آية · صفحة ٤٨٣</small></span></button><button type="button" class="sr" data-s="43" data-n="الزخرف" data-nm="الزخرف" data-c="89"><span class="nb2">٤٣</span><span><b>الزخرف</b><small>مكية · ٨٩ آية · صفحة ٤٨٩</small></span></button><button type="button" class="sr" data-s="44" data-n="الدخان" data-nm="الدخان" data-c="59"><span class="nb2">٤٤</span><span><b>الدخان</b><small>مكية · ٥٩ آية · صفحة ٤٩٦</small></span></button><button type="button" class="sr" data-s="45" data-n="الجاثية" data-nm="الجاثيه" data-c="37"><span class="nb2">٤٥</span><span><b>الجاثية</b><small>مكية · ٣٧ آية · صفحة ٤٩٩</small></span></button><button type="button" class="sr" data-s="46" data-n="الأحقاف" data-nm="الاحقاف" data-c="35"><span class="nb2">٤٦</span><span><b>الأحقاف</b><small>مكية · ٣٥ آية · صفحة ٥٠٢</small></span></button><button type="button" class="sr" data-s="47" data-n="محمد" data-nm="محمد" data-c="38"><span class="nb2">٤٧</span><span><b>محمد</b><small>مدنية · ٣٨ آية · صفحة ٥٠٧</small></span></button><button type="button" class="sr" data-s="48" data-n="الفتح" data-nm="الفتح" data-c="29"><span class="nb2">٤٨</span><span><b>الفتح</b><small>مدنية · ٢٩ آية · صفحة ٥١١</small></span></button><button type="button" class="sr" data-s="49" data-n="الحجرات" data-nm="الحجرات" data-c="18"><span class="nb2">٤٩</span><span><b>الحجرات</b><small>مدنية · ١٨ آية · صفحة ٥١٥</small></span></button><button type="button" class="sr" data-s="50" data-n="ق" data-nm="ق" data-c="45"><span class="nb2">٥٠</span><span><b>ق</b><small>مكية · ٤٥ آية · صفحة ٥١٨</small></span></button><button type="button" class="sr" data-s="51" data-n="الذاريات" data-nm="الذاريات" data-c="60"><span class="nb2">٥١</span><span><b>الذاريات</b><small>مكية · ٦٠ آية · صفحة ٥٢٠</small></span></button><button type="button" class="sr" data-s="52" data-n="الطور" data-nm="الطور" data-c="49"><span class="nb2">٥٢</span><span><b>الطور</b><small>مكية · ٤٩ آية · صفحة ٥٢٣</small></span></button><button type="button" class="sr" data-s="53" data-n="النجم" data-nm="النجم" data-c="62"><span class="nb2">٥٣</span><span><b>النجم</b><small>مكية · ٦٢ آية · صفحة ٥٢٦</small></span></button><button type="button" class="sr" data-s="54" data-n="القمر" data-nm="القمر" data-c="55"><span class="nb2">٥٤</span><span><b>القمر</b><small>مكية · ٥٥ آية · صفحة ٥٢٨</small></span></button><button type="button" class="sr" data-s="55" data-n="الرحمن" data-nm="الرحمن" data-c="78"><span class="nb2">٥٥</span><span><b>الرحمن</b><small>مدنية · ٧٨ آية · صفحة ٥٣١</small></span></button><button type="button" class="sr" data-s="56" data-n="الواقعة" data-nm="الواقعه" data-c="96"><span class="nb2">٥٦</span><span><b>الواقعة</b><small>مكية · ٩٦ آية · صفحة ٥٣٤</small></span></button><button type="button" class="sr" data-s="57" data-n="الحديد" data-nm="الحديد" data-c="29"><span class="nb2">٥٧</span><span><b>الحديد</b><small>مدنية · ٢٩ آية · صفحة ٥٣٧</small></span></button><button type="button" class="sr" data-s="58" data-n="المجادلة" data-nm="المجادله" data-c="22"><span class="nb2">٥٨</span><span><b>المجادلة</b><small>مدنية · ٢٢ آية · صفحة ٥٤٢</small></span></button><button type="button" class="sr" data-s="59" data-n="الحشر" data-nm="الحشر" data-c="24"><span class="nb2">٥٩</span><span><b>الحشر</b><small>مدنية · ٢٤ آية · صفحة ٥٤٥</small></span></button><button type="button" class="sr" data-s="60" data-n="الممتحنة" data-nm="الممتحنه" data-c="13"><span class="nb2">٦٠</span><span><b>الممتحنة</b><small>مدنية · ١٣ آية · صفحة ٥٤٩</small></span></button><button type="button" class="sr" data-s="61" data-n="الصف" data-nm="الصف" data-c="14"><span class="nb2">٦١</span><span><b>الصف</b><small>مدنية · ١٤ آية · صفحة ٥٥١</small></span></button><button type="button" class="sr" data-s="62" data-n="الجمعة" data-nm="الجمعه" data-c="11"><span class="nb2">٦٢</span><span><b>الجمعة</b><small>مدنية · ١١ آية · صفحة ٥٥٣</small></span></button><button type="button" class="sr" data-s="63" data-n="المنافقون" data-nm="المنافقون" data-c="11"><span class="nb2">٦٣</span><span><b>المنافقون</b><small>مدنية · ١١ آية · صفحة ٥٥٤</small></span></button><button type="button" class="sr" data-s="64" data-n="التغابن" data-nm="التغابن" data-c="18"><span class="nb2">٦٤</span><span><b>التغابن</b><small>مدنية · ١٨ آية · صفحة ٥٥٦</small></span></button><button type="button" class="sr" data-s="65" data-n="الطلاق" data-nm="الطلاق" data-c="12"><span class="nb2">٦٥</span><span><b>الطلاق</b><small>مدنية · ١٢ آية · صفحة ٥٥٨</small></span></button><button type="button" class="sr" data-s="66" data-n="التحريم" data-nm="التحريم" data-c="12"><span class="nb2">٦٦</span><span><b>التحريم</b><small>مدنية · ١٢ آية · صفحة ٥٦٠</small></span></button><button type="button" class="sr" data-s="67" data-n="الملك" data-nm="الملك" data-c="30"><span class="nb2">٦٧</span><span><b>الملك</b><small>مكية · ٣٠ آية · صفحة ٥٦٢</small></span></button><button type="button" class="sr" data-s="68" data-n="القلم" data-nm="القلم" data-c="52"><span class="nb2">٦٨</span><span><b>القلم</b><small>مكية · ٥٢ آية · صفحة ٥٦٤</small></span></button><button type="button" class="sr" data-s="69" data-n="الحاقة" data-nm="الحاقه" data-c="52"><span class="nb2">٦٩</span><span><b>الحاقة</b><small>مكية · ٥٢ آية · صفحة ٥٦٦</small></span></button><button type="button" class="sr" data-s="70" data-n="المعارج" data-nm="المعارج" data-c="44"><span class="nb2">٧٠</span><span><b>المعارج</b><small>مكية · ٤٤ آية · صفحة ٥٦٨</small></span></button><button type="button" class="sr" data-s="71" data-n="نوح" data-nm="نوح" data-c="28"><span class="nb2">٧١</span><span><b>نوح</b><small>مكية · ٢٨ آية · صفحة ٥٧٠</small></span></button><button type="button" class="sr" data-s="72" data-n="الجن" data-nm="الجن" data-c="28"><span class="nb2">٧٢</span><span><b>الجن</b><small>مكية · ٢٨ آية · صفحة ٥٧٢</small></span></button><button type="button" class="sr" data-s="73" data-n="المزمل" data-nm="المزمل" data-c="20"><span class="nb2">٧٣</span><span><b>المزمل</b><small>مكية · ٢٠ آية · صفحة ٥٧٤</small></span></button><button type="button" class="sr" data-s="74" data-n="المدثر" data-nm="المدثر" data-c="56"><span class="nb2">٧٤</span><span><b>المدثر</b><small>مكية · ٥٦ آية · صفحة ٥٧٥</small></span></button><button type="button" class="sr" data-s="75" data-n="القيامة" data-nm="القيامه" data-c="40"><span class="nb2">٧٥</span><span><b>القيامة</b><small>مكية · ٤٠ آية · صفحة ٥٧٧</small></span></button><button type="button" class="sr" data-s="76" data-n="الإنسان" data-nm="الانسان" data-c="31"><span class="nb2">٧٦</span><span><b>الإنسان</b><small>مدنية · ٣١ آية · صفحة ٥٧٨</small></span></button><button type="button" class="sr" data-s="77" data-n="المرسلات" data-nm="المرسلات" data-c="50"><span class="nb2">٧٧</span><span><b>المرسلات</b><small>مكية · ٥٠ آية · صفحة ٥٨٠</small></span></button><button type="button" class="sr" data-s="78" data-n="النبأ" data-nm="النبا" data-c="40"><span class="nb2">٧٨</span><span><b>النبأ</b><small>مكية · ٤٠ آية · صفحة ٥٨٢</small></span></button><button type="button" class="sr" data-s="79" data-n="النازعات" data-nm="النازعات" data-c="46"><span class="nb2">٧٩</span><span><b>النازعات</b><small>مكية · ٤٦ آية · صفحة ٥٨٣</small></span></button><button type="button" class="sr" data-s="80" data-n="عبس" data-nm="عبس" data-c="42"><span class="nb2">٨٠</span><span><b>عبس</b><small>مكية · ٤٢ آية · صفحة ٥٨٥</small></span></button><button type="button" class="sr" data-s="81" data-n="التكوير" data-nm="التكوير" data-c="29"><span class="nb2">٨١</span><span><b>التكوير</b><small>مكية · ٢٩ آية · صفحة ٥٨٦</small></span></button><button type="button" class="sr" data-s="82" data-n="الانفطار" data-nm="الانفطار" data-c="19"><span class="nb2">٨٢</span><span><b>الانفطار</b><small>مكية · ١٩ آية · صفحة ٥٨٧</small></span></button><button type="button" class="sr" data-s="83" data-n="المطففين" data-nm="المطففين" data-c="36"><span class="nb2">٨٣</span><span><b>المطففين</b><small>مكية · ٣٦ آية · صفحة ٥٨٧</small></span></button><button type="button" class="sr" data-s="84" data-n="الانشقاق" data-nm="الانشقاق" data-c="25"><span class="nb2">٨٤</span><span><b>الانشقاق</b><small>مكية · ٢٥ آية · صفحة ٥٨٩</small></span></button><button type="button" class="sr" data-s="85" data-n="البروج" data-nm="البروج" data-c="22"><span class="nb2">٨٥</span><span><b>البروج</b><small>مكية · ٢٢ آية · صفحة ٥٩٠</small></span></button><button type="button" class="sr" data-s="86" data-n="الطارق" data-nm="الطارق" data-c="17"><span class="nb2">٨٦</span><span><b>الطارق</b><small>مكية · ١٧ آية · صفحة ٥٩١</small></span></button><button type="button" class="sr" data-s="87" data-n="الأعلى" data-nm="الاعلي" data-c="19"><span class="nb2">٨٧</span><span><b>الأعلى</b><small>مكية · ١٩ آية · صفحة ٥٩١</small></span></button><button type="button" class="sr" data-s="88" data-n="الغاشية" data-nm="الغاشيه" data-c="26"><span class="nb2">٨٨</span><span><b>الغاشية</b><small>مكية · ٢٦ آية · صفحة ٥٩٢</small></span></button><button type="button" class="sr" data-s="89" data-n="الفجر" data-nm="الفجر" data-c="30"><span class="nb2">٨٩</span><span><b>الفجر</b><small>مكية · ٣٠ آية · صفحة ٥٩٣</small></span></button><button type="button" class="sr" data-s="90" data-n="البلد" data-nm="البلد" data-c="20"><span class="nb2">٩٠</span><span><b>البلد</b><small>مكية · ٢٠ آية · صفحة ٥٩٤</small></span></button><button type="button" class="sr" data-s="91" data-n="الشمس" data-nm="الشمس" data-c="15"><span class="nb2">٩١</span><span><b>الشمس</b><small>مكية · ١٥ آية · صفحة ٥٩٥</small></span></button><button type="button" class="sr" data-s="92" data-n="الليل" data-nm="الليل" data-c="21"><span class="nb2">٩٢</span><span><b>الليل</b><small>مكية · ٢١ آية · صفحة ٥٩٥</small></span></button><button type="button" class="sr" data-s="93" data-n="الضحى" data-nm="الضحي" data-c="11"><span class="nb2">٩٣</span><span><b>الضحى</b><small>مكية · ١١ آية · صفحة ٥٩٦</small></span></button><button type="button" class="sr" data-s="94" data-n="الشرح" data-nm="الشرح" data-c="8"><span class="nb2">٩٤</span><span><b>الشرح</b><small>مكية · ٨ آية · صفحة ٥٩٦</small></span></button><button type="button" class="sr" data-s="95" data-n="التين" data-nm="التين" data-c="8"><span class="nb2">٩٥</span><span><b>التين</b><small>مكية · ٨ آية · صفحة ٥٩٧</small></span></button><button type="button" class="sr" data-s="96" data-n="العلق" data-nm="العلق" data-c="19"><span class="nb2">٩٦</span><span><b>العلق</b><small>مكية · ١٩ آية · صفحة ٥٩٧</small></span></button><button type="button" class="sr" data-s="97" data-n="القدر" data-nm="القدر" data-c="5"><span class="nb2">٩٧</span><span><b>القدر</b><small>مكية · ٥ آية · صفحة ٥٩٨</small></span></button><button type="button" class="sr" data-s="98" data-n="البينة" data-nm="البينه" data-c="8"><span class="nb2">٩٨</span><span><b>البينة</b><small>مدنية · ٨ آية · صفحة ٥٩٨</small></span></button><button type="button" class="sr" data-s="99" data-n="الزلزلة" data-nm="الزلزله" data-c="8"><span class="nb2">٩٩</span><span><b>الزلزلة</b><small>مدنية · ٨ آية · صفحة ٥٩٩</small></span></button><button type="button" class="sr" data-s="100" data-n="العاديات" data-nm="العاديات" data-c="11"><span class="nb2">١٠٠</span><span><b>العاديات</b><small>مكية · ١١ آية · صفحة ٥٩٩</small></span></button><button type="button" class="sr" data-s="101" data-n="القارعة" data-nm="القارعه" data-c="11"><span class="nb2">١٠١</span><span><b>القارعة</b><small>مكية · ١١ آية · صفحة ٦٠٠</small></span></button><button type="button" class="sr" data-s="102" data-n="التكاثر" data-nm="التكاثر" data-c="8"><span class="nb2">١٠٢</span><span><b>التكاثر</b><small>مكية · ٨ آية · صفحة ٦٠٠</small></span></button><button type="button" class="sr" data-s="103" data-n="العصر" data-nm="العصر" data-c="3"><span class="nb2">١٠٣</span><span><b>العصر</b><small>مكية · ٣ آية · صفحة ٦٠١</small></span></button><button type="button" class="sr" data-s="104" data-n="الهمزة" data-nm="الهمزه" data-c="9"><span class="nb2">١٠٤</span><span><b>الهمزة</b><small>مكية · ٩ آية · صفحة ٦٠١</small></span></button><button type="button" class="sr" data-s="105" data-n="الفيل" data-nm="الفيل" data-c="5"><span class="nb2">١٠٥</span><span><b>الفيل</b><small>مكية · ٥ آية · صفحة ٦٠١</small></span></button><button type="button" class="sr" data-s="106" data-n="قريش" data-nm="قريش" data-c="4"><span class="nb2">١٠٦</span><span><b>قريش</b><small>مكية · ٤ آية · صفحة ٦٠٢</small></span></button><button type="button" class="sr" data-s="107" data-n="الماعون" data-nm="الماعون" data-c="7"><span class="nb2">١٠٧</span><span><b>الماعون</b><small>مكية · ٧ آية · صفحة ٦٠٢</small></span></button><button type="button" class="sr" data-s="108" data-n="الكوثر" data-nm="الكوثر" data-c="3"><span class="nb2">١٠٨</span><span><b>الكوثر</b><small>مكية · ٣ آية · صفحة ٦٠٢</small></span></button><button type="button" class="sr" data-s="109" data-n="الكافرون" data-nm="الكافرون" data-c="6"><span class="nb2">١٠٩</span><span><b>الكافرون</b><small>مكية · ٦ آية · صفحة ٦٠٣</small></span></button><button type="button" class="sr" data-s="110" data-n="النصر" data-nm="النصر" data-c="3"><span class="nb2">١١٠</span><span><b>النصر</b><small>مدنية · ٣ آية · صفحة ٦٠٣</small></span></button><button type="button" class="sr" data-s="111" data-n="المسد" data-nm="المسد" data-c="5"><span class="nb2">١١١</span><span><b>المسد</b><small>مكية · ٥ آية · صفحة ٦٠٣</small></span></button><button type="button" class="sr" data-s="112" data-n="الإخلاص" data-nm="الاخلاص" data-c="4"><span class="nb2">١١٢</span><span><b>الإخلاص</b><small>مكية · ٤ آية · صفحة ٦٠٤</small></span></button><button type="button" class="sr" data-s="113" data-n="الفلق" data-nm="الفلق" data-c="5"><span class="nb2">١١٣</span><span><b>الفلق</b><small>مكية · ٥ آية · صفحة ٦٠٤</small></span></button><button type="button" class="sr" data-s="114" data-n="الناس" data-nm="الناس" data-c="6"><span class="nb2">١١٤</span><span><b>الناس</b><small>مكية · ٦ آية · صفحة ٦٠٤</small></span></button></div></div>
 <div id="qrd" hidden><div class="qinf"><span class="qhd" id="qhd"></span></div>
 <div class="qov" id="qov" hidden><button type="button" id="qbk">☰ الفهرس</button><button type="button" id="qplp" class="qg3">▶ استمع للصفحة</button></div>
@@ -643,10 +685,10 @@ body.qpb #qnv{display:none}
 <div id="qkh" hidden><div class="qbar"><button type="button" id="qkbk">☰ الفهرس</button></div>
 <div id="qk0" class="qcard2"><h3>📅 ابدأ ختمتك</h3><p class="qd">اختر المدة التي تريد أن تختم فيها القرآن، وسنقسّم لك الورد اليومي ونتابع تقدّمك تلقائيًا مع كل صفحة تقرؤها هنا.</p><div class="chips" id="qkd"></div><p class="qd" id="qkc"></p><button type="button" id="qkst" class="qg">ابدأ الختمة</button></div>
 <div id="qk1" class="qcard2" hidden><div class="qring" id="qkr"><div><b id="qkp"></b></div></div><p class="qq" id="qkq"></p><div id="qkl" class="qkl"></div><div class="qkw" id="qkw"></div><div class="qbd" id="qbd" hidden></div><div class="qrem"><button type="button" id="qrb" class="qchk" aria-pressed="false"><i>✓</i> ذكّرني بورد اليوم</button><div class="rr" id="qrr" hidden><label for="qrt">وقت التذكير</label><input type="time" id="qrt" value="20:00"></div><small id="qrn"></small></div><button type="button" id="qkgo" class="qg"></button><button type="button" id="qkdn" class="qg2">✓ أتممت ورد اليوم (قرأته من مصحف ورقي)</button><button type="button" id="qknew" class="qg" hidden>🌟 ابدأ ختمة جديدة</button><button type="button" id="qkrs" class="qlink">إعادة ضبط الختمة</button></div></div>
-<div id="qsh" class="qsh" hidden><div class="qsb" id="qsb"></div><div class="qshb"><h3 id="qst"></h3><div class="rrow"><label for="qrec2">🎙️ القارئ</label><select id="qrec2" aria-label="القارئ"></select></div><div class="lbl">🔁 تكرار الآية</div><div class="chips" id="qrpc"></div><button type="button" id="qcont" class="qchk" aria-pressed="false"><i>✓</i> متابعة الآيات التالية بعد انتهاء التكرار</button><div class="qsn" id="qsn" hidden></div><div class="rw"><button type="button" class="pp" id="qplay">▶ استماع</button><button type="button" class="cl2" id="qcl">إغلاق</button></div></div></div>
+<div id="qsh" class="qsh" hidden><div class="qsb" id="qsb"></div><div class="qshb"><div class="qgrip"></div><div class="qsh2"><h3 id="qst"></h3><button type="button" id="qcl" class="qdn" aria-label="إنزال البطاقة (يستمر الصوت)">⌄</button></div><div class="qsa" id="qsa"></div><div class="qsn" id="qsn" hidden></div><div class="qctr"><button type="button" id="qsx" class="cb" aria-label="الآية التالية">◀◀</button><button type="button" id="qplay" class="cp" aria-label="استماع">▶</button><button type="button" id="qsv" class="cb" aria-label="الآية السابقة">▶▶</button></div><div class="lbl">🔁 تكرار الآية</div><div class="chips" id="qrpc"></div><button type="button" id="qcont" class="qchk" aria-pressed="false"><i>✓</i> متابعة الآيات التالية بعد انتهاء التكرار</button><div class="rrow"><label for="qrec2">🎙️ القارئ</label><select id="qrec2" aria-label="القارئ"></select></div></div></div>
 <div id="qpl" class="qfab" hidden><div class="qfp" id="qfp" hidden><div class="qpi"><b id="qpt"></b><small id="qpk"></small></div><div class="qpc"><button type="button" id="qpx" class="qx" aria-label="إنهاء التشغيل">✕</button><button type="button" id="qrw" class="sk" aria-label="رجوع عشر ثوان">⏪<small>١٠</small></button><button type="button" id="qpz" class="pz" aria-label="إيقاف مؤقت">⏸</button><button type="button" id="qfw" class="sk" aria-label="تقديم عشر ثوان">⏩<small>١٠</small></button></div><input type="range" id="qsk" class="qsk" min="0" max="1000" value="0" aria-label="موضع التشغيل"></div><button type="button" id="qfb" class="qfb" aria-label="التحكم بالصوت"><span class="wv"><i></i><i></i><i></i><i></i><i></i></span></button></div>
 <div class="qtt" id="qtt" hidden></div></main></section><section class="page" id="tasbeeh"><main><div class="top"><a class="back" href="#">→ الرئيسية</a><h2>📿 المسبحة الإلكترونية</h2></div><div class="tsb" id="tsb"><div class="chips" id="tch"><button type="button" class="chip on" data-i="0" data-t="سُبْحَانَ اللَّهِ">سبحان الله</button><button type="button" class="chip" data-i="1" data-t="الْحَمْدُ لِلَّهِ">الحمد لله</button><button type="button" class="chip" data-i="2" data-t="اللَّهُ أَكْبَرُ">الله أكبر</button><button type="button" class="chip" data-i="3" data-t="لَا إِلَهَ إِلَّا اللَّهُ">لا إله إلا الله</button><button type="button" class="chip" data-i="4" data-t="أَسْتَغْفِرُ اللَّهَ">أستغفر الله</button><button type="button" class="chip" data-i="5" data-t="اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ">الصلاة على النبي</button><button type="button" class="chip" data-i="6" data-t="لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ">لا حول ولا قوة</button><button type="button" class="chip" data-i="7" data-t="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ">سبحان الله وبحمده</button><button type="button" class="chip" data-i="8" data-t="">ذكر حر</button></div><div class="tz" id="tz">سُبْحَانَ اللَّهِ</div><button type="button" class="tb" id="tb" aria-label="عدّ"><span id="tn">٠</span><small id="tg"></small></button><div class="chips tgs" id="tgc"><button type="button" class="chip on" data-g="0">بلا حد</button><button type="button" class="chip" data-g="33">٣٣</button><button type="button" class="chip" data-g="99">٩٩</button><button type="button" class="chip" data-g="100">١٠٠</button></div><div class="tst"><div><b id="tr">٠</b><span>دورات</span></div><div><b id="tt">٠</b><span>الإجمالي</span></div></div><div class="tlog"><div class="tl3"><div><b id="tld">٠</b><span>تسبيح اليوم</span></div><div><b id="tlw">٠</b><span>آخر ٧ أيام</span></div></div><div class="tbars" id="tlb"></div></div><button type="button" class="rs" id="trs">تصفير العدّاد</button></div></main></section><section class="page" id="prayer"><main><div class="top"><a class="back" href="#">→ الرئيسية</a><h2>🕰️ أوقات الصلاة</h2></div><div id="pt" class="pt"><div class="pick"><label for="pcity">اختر مدينتك</label><select id="pcity"><option value="">— اختر المدينة —</option><option value="c0" data-la="24.7136" data-lo="46.6753">الرياض</option><option value="c1" data-la="21.4858" data-lo="39.1925">جدة</option><option value="c2" data-la="21.3891" data-lo="39.8579">مكة المكرمة</option><option value="c3" data-la="24.4672" data-lo="39.6111">المدينة المنورة</option><option value="c4" data-la="26.4207" data-lo="50.0888">الدمام</option><option value="c5" data-la="26.2172" data-lo="50.1971">الخبر</option><option value="c6" data-la="26.2361" data-lo="50.0393">الظهران</option><option value="c7" data-la="25.3648" data-lo="49.5875">الهفوف</option><option value="c8" data-la="26.5196" data-lo="50.0115">القطيف</option><option value="c9" data-la="27.0046" data-lo="49.646">الجبيل</option><option value="c10" data-la="28.4328" data-lo="45.9708">حفر الباطن</option><option value="c11" data-la="24.1556" data-lo="47.312">الخرج</option><option value="c12" data-la="26.326" data-lo="43.975">بريدة</option><option value="c13" data-la="26.084" data-lo="43.994">عنيزة</option><option value="c14" data-la="27.5114" data-lo="41.7208">حائل</option><option value="c15" data-la="28.3835" data-lo="36.5662">تبوك</option><option value="c16" data-la="21.2703" data-lo="40.4158">الطائف</option><option value="c17" data-la="24.0895" data-lo="38.0618">ينبع</option><option value="c18" data-la="18.2164" data-lo="42.5053">أبها</option><option value="c19" data-la="18.3093" data-lo="42.7292">خميس مشيط</option><option value="c20" data-la="17.4917" data-lo="44.1322">نجران</option><option value="c21" data-la="16.8892" data-lo="42.5511">جازان</option><option value="c22" data-la="20.0129" data-lo="41.4677">الباحة</option><option value="c23" data-la="29.9697" data-lo="40.2064">سكاكا</option><option value="c24" data-la="30.9753" data-lo="41.0381">عرعر</option></select></div><div class="note" id="pst">اختر مدينتك لعرض أوقات الصلاة.</div><div id="pl" class="pl"></div><p class="pnote">🔒 لا نطلب موقعك. تُستخدم المدينة التي تختارها فقط لحساب الأوقات عبر خدمة Aladhan، وتُحفظ على جهازك وحده.</p></div></main></section>
-<footer><div class="sig"><span>معاذ الحجي</span><svg viewBox="0 0 178 62" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6512"/><stop offset=".35" stop-color="#d9b24a"/><stop offset=".55" stop-color="#f6e4a0"/><stop offset=".8" stop-color="#c9962f"/><stop offset="1" stop-color="#8a6512"/></linearGradient></defs><path class="f" d="M46 51 C4 47 -4 13 44 7 C102 -1 176 3 174 24 C173 37 152 40 132 35 C150 36 170 33 170 24 C171 7 100 3 44 10 C6 16 10 44 46 51 Z"/><path class="l" d="M50 57 C80 51 120 51 154 55"/><path class="f" d="M160 55 l4 -3.5 l4 3.5 l-4 3.5 z"/><circle class="f" cx="44" cy="51" r="2.2"/></svg></div></footer>
+<footer><small class="qver">الإصدار ٢٩</small><div class="sig"><span>معاذ الحجي</span><svg viewBox="0 0 178 62" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6512"/><stop offset=".35" stop-color="#d9b24a"/><stop offset=".55" stop-color="#f6e4a0"/><stop offset=".8" stop-color="#c9962f"/><stop offset="1" stop-color="#8a6512"/></linearGradient></defs><path class="f" d="M46 51 C4 47 -4 13 44 7 C102 -1 176 3 174 24 C173 37 152 40 132 35 C150 36 170 33 170 24 C171 7 100 3 44 10 C6 16 10 44 46 51 Z"/><path class="l" d="M50 57 C80 51 120 51 154 55"/><path class="f" d="M160 55 l4 -3.5 l4 3.5 l-4 3.5 z"/><circle class="f" cx="44" cy="51" r="2.2"/></svg></div></footer>
 <script>
 const IB="https://cdn.mp3quran.net/audio/idrees-abkar/r1/",EA="https://everyayah.com/data/Alafasy_128kbps/";
 const SUR={"qf":1,"i":112,"f":113,"n":114,"kf":109,"mulk":67,"pi":112,"pf":113,"pn":114};const AY={"k":[2,255,255],"b":[2,285,286],"qb":[2,1,5],"qr":[7,117,122],"qy":[10,81,82],"qt":[20,69,69],"qm":[23,115,118],"qmm":[23,97,98],"qs":[37,1,10],"qh":[59,21,24],"qi":[17,82,82],"qyy":[10,57,57],"qsh":[26,80,80],"q51":[9,51,51],"q129":[9,129,129],"pk":[2,255,255],"wk5":[3,190,200],"wk20":[20,25,26]};
@@ -819,14 +861,15 @@ function clamp(v,a,b){v=+v;if(!isFinite(v))v=a;return Math.min(b,Math.max(a,v))}
 
 /* ---------- القرّاء ---------- */
 var RC=[
- {n:"عبدالرحمن السديس",b:"Abdurrahmaan_As-Sudais_192kbps"},
- {n:"ماهر المعيقلي",b:"MaherAlMuaiqly128kbps"},
- {n:"إدريس أبكر (سورة كاملة فقط)",u:"https://cdn.mp3quran.net/audio/idrees-abkar/r1/"},
- {n:"مشاري العفاسي",b:"Alafasy_128kbps"},
- {n:"سعود الشريم",b:"Saood_ash-Shuraym_128kbps"},
- {n:"صلاح البدير",b:"Salah_Al_Budair_128kbps"},
- {n:"ياسر الدوسري",b:"Yasser_Ad-Dussary_128kbps"},
- {n:"عبدالله عواد الجهني",b:"Abdullaah_3awwaad_Al-Juhaynee_128kbps"}
+ {n:"عبدالرحمن السديس",r:54,f:"abdulrahman-sudais/r1/"},
+ {n:"ماهر المعيقلي",r:133,f:"maher-muaiqly/r3/"},
+ {n:"إدريس أبكر",r:12,f:"idrees-abkar/r1/"},
+ {n:"مشاري العفاسي",r:123,f:"mishary-alafasy/r1/"},
+ {n:"سعود الشريم",r:31,f:"saud-shuraim/r1/"},
+ {n:"صلاح البدير",r:43,f:"salah-budair/r1/"},
+ {n:"ياسر الدوسري",r:92,f:"yasser-dosari/r1/"},
+ {n:"عبدالله عواد الجهني",r:62,f:"abdullah-juhani/r1/"},
+ {n:"بندر بليلة",r:217,f:"bandar-baleela/r1/"}
 ];
 var SB=[].slice.call(root.querySelectorAll(".sr"));
 var NM=SB.map(function(b){return b.getAttribute("data-nm")});
@@ -836,7 +879,6 @@ var Q=null;
 if(QD&&QD.length===114){var okq=true;for(var qi=0;qi<114;qi++){if(!Array.isArray(QD[qi])||QD[qi].length!==CN[qi]){okq=false;break}}if(okq)Q=QD}
 QD=null;
 var ri=clamp(lg("qr",0),0,RC.length-1)|0;
-var rp=lg("qr2",null);if(typeof rp!=="number"||!RC[rp]||!RC[rp].b)rp=RC[ri].b?ri:0;
 var rep=lg("qrp",1);if([1,2,3,4].indexOf(rep)<0)rep=1;
 var fs=clamp(lg("qfs",2),0,4)|0;
 var cur=1,pos=null,follow=true;
@@ -916,7 +958,7 @@ function render(p,dir){
  mark();
  clearTimeout(readT);readT=setTimeout(function(){if(!rd.hidden&&location.hash==="#quran")markRead(p)},5000);
 }
-/* حجم خط موحّد لكل الصفحات: يُقدَّر من عيّنة صفحات، وتُضغط المسافة بين الأسطر في الصفحات الأكثف بدل تصغير الخط */
+/* حجم خط موحّد لكل الصفحات؛ والصفحات الأخف تُوزَّع أسطرها لتملأ الشاشة بدل ترك فراغ أبيض */
 var GS={k:"",v:18};
 function gsize(inner){
  var k=pg.clientWidth+"x"+inner;if(GS.k===k)return GS.v;
@@ -924,12 +966,12 @@ function gsize(inner){
  mz.style.cssText="position:absolute;visibility:hidden;top:0;left:0;right:0;padding:inherit;box-sizing:border-box;pointer-events:none";
  pg.appendChild(mz);
  for(p=1;p<=604;p+=(p<20||p>580?1:3)){
-  var r=boxFor(rangeOf(p));mz.textContent="";mz.appendChild(r.box);r.box.style.fontSize=ref+"px";r.box.style.lineHeight="2.05";
+  var r=boxFor(rangeOf(p));mz.textContent="";mz.appendChild(r.box);r.box.style.fontSize=ref+"px";r.box.style.lineHeight="1.72";
   var h=r.box.offsetHeight;if(h>0)est.push(ref*Math.sqrt(inner/h));
  }
  mz.remove();
  est.sort(function(a,b){return a-b});
- var v=est.length?est[Math.floor(est.length*0.2)]:18;
+ var v=est.length?est[Math.floor(est.length*0.12)]:18;
  v=Math.max(14.5,Math.min(30,v));
  GS={k:k,v:v};return v;
 }
@@ -939,23 +981,50 @@ function fit(){
  var top=pg.getBoundingClientRect().top;
  var sa=0;try{if(window.navigator.standalone||matchMedia("(display-mode: standalone)").matches)sa=14}catch(e){}
  var h=Math.max(240,window.innerHeight-top-6-sa);pg.style.height=h+"px";
- var inner=h-14,gs=gsize(inner),lh=2.05;
- box.style.fontSize=gs+"px";box.style.lineHeight=lh;
- var H=box.offsetHeight;
- if(H>inner){
-  lh=Math.max(1.75,Math.floor(lh*inner/H*100)/100);box.style.lineHeight=lh;H=box.offsetHeight;
-  if(H>inner){var lo=14.5,hi=gs,best=14.5,i;for(i=0;i<9;i++){var m=(lo+hi)/2;box.style.fontSize=m+"px";if(box.offsetHeight<=inner){best=m;lo=m}else hi=m}box.style.fontSize=best+"px"}
+ var inner=h-14,gs=gsize(inner),lh=1.95,i,H,m,short=box.className.indexOf(" c")>0;
+ /* أكبر خط (بحد أقصى ٢٢٪ فوق الأساس) يتّسع للصفحة، ثم تُوزَّع الأسطر لتملأ الشاشة */
+ var lo=gs,hi=Math.min(36,gs*1.22),best=gs;
+ box.style.lineHeight=lh;
+ box.style.fontSize=hi+"px";
+ if(box.offsetHeight<=inner)best=hi;
+ else{for(i=0;i<9;i++){m=(lo+hi)/2;box.style.fontSize=m+"px";if(box.offsetHeight<=inner){best=m;lo=m}else hi=m}}
+ box.style.fontSize=best+"px";H=box.offsetHeight;
+ if(!short){
+  for(i=0;i<3;i++){
+   if(H>inner*0.985||H<inner*0.97){lh=Math.max(1.6,Math.min(2.75,lh*inner/H*0.995));box.style.lineHeight=lh.toFixed(3);H=box.offsetHeight}
+  }
  }
- var over=box.offsetHeight>inner;
+ if(H>inner){lo=14.5;hi=best;for(i=0;i<9;i++){m=(lo+hi)/2;box.style.fontSize=m+"px";if(box.offsetHeight<=inner){best=m;lo=m}else hi=m}box.style.fontSize=best+"px";H=box.offsetHeight}
+ box.style.setProperty("--lh",String(lh));
+ box._lp=lh*parseFloat(box.style.fontSize);
+ var over=H>inner;
  pg.style.overflowY=over?"auto":"hidden";pg.style.justifyContent=over?"flex-start":"center";pg.scrollTop=0;
 }
-window.addEventListener("resize",function(){GS.k="";fit()});
+window.addEventListener("resize",function(){GS.k="";fit();mark()});
 try{document.fonts&&document.fonts.load("24px \"Amiri Quran\"").then(function(){GS.k="";fit()})}catch(e){}
+/* تظليل الآية: مستطيلات تُرسم من هندسة الأسطر الفعلية، بارتفاع السطر لا بارتفاع الخط، فلا تتداخل ولا تكبر */
+function clearHl(){var o=pg.querySelectorAll(".hlr");for(var i=0;i<o.length;i++)o[i].remove()}
+function drawHl(e){
+ var box=pg.firstChild;if(!box||!box.getBoundingClientRect||box.className.indexOf("qt")<0)return;
+ var bx=box.getBoundingClientRect(),rs=e.getClientRects(),lp=box._lp||(parseFloat(box.style.fontSize)*2),rows=[],i,j;
+ for(i=0;i<rs.length;i++){
+  var r=rs[i];if(r.width<2)continue;
+  var cy=r.top+r.height/2,row=null;
+  for(j=0;j<rows.length;j++)if(Math.abs(rows[j].cy-cy)<lp*0.45){row=rows[j];break}
+  if(!row)rows.push({cy:cy,l:r.left,r:r.right});else{row.l=Math.min(row.l,r.left);row.r=Math.max(row.r,r.right)}
+ }
+ var h=Math.round(lp*0.9);
+ rows.forEach(function(w){
+  var d=mk("div","hlr");
+  d.style.cssText="top:"+Math.round(w.cy-bx.top-h/2)+"px;height:"+h+"px;left:"+Math.round(w.l-bx.left-3)+"px;width:"+Math.round(w.r-w.l+6)+"px";
+  box.insertBefore(d,box.firstChild);
+ });
+}
 function mark(){
- var o=pg.querySelectorAll(".sel,.ply");for(var i=0;i<o.length;i++)o[i].classList.remove("sel","ply");
+ clearHl();
  if(!pos)return null;
  var e=pg.querySelector('.ay[data-s="'+pos.s+'"][data-a="'+pos.a+'"]');
- if(e){if(E.on&&E.tag==="r")e.classList.add("ply");else if(!$("qsh").hidden)e.classList.add("sel")}
+ if(e&&((E.on&&E.tag==="r")||!$("qsh").hidden))drawHl(e);
  return e;
 }
 function goPage(p,dir){
@@ -971,10 +1040,10 @@ function openAt(s,a){
 }
 function openPage(p){show(rd);var f=rangeOf(clamp(p,1,604)|0)[0];save(f[0],f[1]);render(clamp(p,1,604)|0);hint()}
 
-/* ---------- محرك الصوت: عنصرا صوت يتناوبان فلا يوجد انقطاع بين الآيات ---------- */
-var A=[new Audio(),new Audio()],au=A[0],pre=A[1],spd=1,unl=false;
-A.forEach(function(a){a.preload="auto"});
-var E={on:false,list:[],i:0,k:0,lp:0,rep:1,loops:1,ri:0,full:false,tag:"r",cb:null,seek:0,ca:0};
+/* ---------- محرك الصوت: ملف السورة كاملًا بلا انقطاع، مع توقيت كل آية للتظليل والتكرار ---------- */
+var au=new Audio(),spd=1;
+au.preload="auto";
+var E={on:false,s:1,a0:1,a1:1,a:1,k:0,rep:1,ri:0,tag:"r",cb:null,toEnd:false,tm:null,tmReady:false,wait:false,tok:0,top:false,ld:false};
 var WC={};
 function W(s){
  if(WC[s])return WC[s];
@@ -983,147 +1052,129 @@ function W(s){
  for(i=0;i<c.length;i++)c[i]=c[i]/t;
  return (WC[s]=c);
 }
-function frac(s,a){return W(s)[a-1]||0}
-function ayahAt(s,f){var c=W(s),lo=1,hi=CN[s-1];while(lo<hi){var m=(lo+hi+1)>>1;if(c[m-1]<=f)lo=m;else hi=m-1}return lo}
-function url(it){var r=RC[E.ri];return r.b?"https://everyayah.com/data/"+r.b+"/"+p3(it[0])+p3(it[1])+".mp3":r.u+p3(it[0])+".mp3"}
+var TMC={};
+function tmStore(key,v){var o=lg("qtm",{}),ks=Object.keys(o);if(ks.length>50)delete o[ks[0]];o[key]=v;ls("qtm",o)}
+/* أزمنة الآيات (بالثواني) من خدمة mp3quran؛ إن تعذّرت يُستعمل تقدير بحسب طول النص */
+function getTM(r,s,cb){
+ var key=RC[r].r+":"+s;
+ if(TMC[key]!==undefined){cb(TMC[key]);return}
+ var st=lg("qtm",{});if(st[key]&&st[key].length>CN[s-1]){TMC[key]=st[key];cb(st[key]);return}
+ if(!window.fetch){TMC[key]=null;cb(null);return}
+ var done=false;
+ var fin=function(v){if(done)return;done=true;clearTimeout(tmo);cb(v)};
+ var tmo=setTimeout(function(){fin(null)},4500);
+ var get=function(host,next){
+  fetch("https://"+host+"/api/v3/ayat_timing?surah="+s+"&read="+RC[r].r,{credentials:"omit"}).then(function(x){if(!x.ok)throw 0;return x.json()}).then(function(j){
+   if(!Array.isArray(j))throw 0;
+   var arr=[],i;
+   j.forEach(function(x){var a=+x.ayah,st=+x.start_time,en=+x.end_time;if(a>=0&&a<=CN[s-1]&&isFinite(st)&&isFinite(en))arr[a]=[st/1000,en/1000]});
+   for(i=1;i<=CN[s-1];i++)if(!arr[i])throw 0;
+   if(!arr[0])arr[0]=[0,arr[1][0]];
+   TMC[key]=arr;tmStore(key,arr);fin(arr);
+  }).catch(function(){if(next)get(next);else{if(TMC[key]===undefined)TMC[key]=null;fin(null)}});
+ };
+ get("mp3quran.net","www.mp3quran.net");
+}
+function T(a){
+ var x=E.tm&&E.tm[a];if(x)return x;
+ var c=W(E.s),d=isFinite(au.duration)?au.duration:0;
+ if(a<1)return [0,c[0]*d];
+ return [c[a-1]*d,c[a]*d];
+}
+function ayahAtTime(t){
+ var n=CN[E.s-1],lo=1,hi=n,m;
+ while(lo<hi){m=(lo+hi+1)>>1;if(T(m)[0]<=t+0.001)lo=m;else hi=m-1}
+ return lo;
+}
+function surl(r,s){return "https://cdn.mp3quran.net/audio/"+RC[r].f+p3(s)+".mp3"}
 function safePlay(){var pr=au.play();if(pr&&pr.catch)pr.catch(efail)}
 function efail(){if(!E.on)return;E.on=false;try{au.pause()}catch(e){}bar();toast("تعذّر تشغيل الصوت. تحقق من الاتصال بالإنترنت")}
-/* ما سيُشغَّل بعد الحالي (تكرار أو الآية التالية) دون تغيير الحالة */
-function nxt(){
- var k=E.k+1,i=E.i,lp=E.lp;
- if(k<E.rep)return {k:k,i:i,lp:lp};
- if(i+1<E.list.length)return {k:0,i:i+1,lp:lp};
- lp++;
- if(E.loops>=999||lp<E.loops)return {k:0,i:0,lp:lp};
- return null;
-}
-function prepNext(){
- if(!E.on||E.full)return;
- var n=nxt();if(!n)return;
- var u=url(E.list[n.i]);
- if(pre.getAttribute("src")!==u){pre.src=u;try{pre.load()}catch(e){}}
-}
-/* iOS يسمح بتشغيل العنصر الثاني لاحقًا فقط إذا جرى "فتحه" بلمسة المستخدم */
-function unlockPre(){
- if(unl||!pre.getAttribute("src"))return;
- var el=pre;unl=true;
- try{
-  el.muted=true;var pr=el.play();
-  var done=function(){if(el===au)return;try{el.pause();el.currentTime=0}catch(e){}el.muted=false};
-  if(pr&&pr.then)pr.then(done,function(){unl=false;el.muted=false});else done();
- }catch(e){unl=false;el.muted=false}
+function seekTo(t){try{au.currentTime=Math.max(0,t)}catch(e){}}
+function curIt(){return [E.s,E.a]}
+function emit(){if(E.cb)E.cb(curIt(),true);bar()}
+/* بعد وصول الأزمنة وبيانات الملف: اذهب إلى الآية المطلوبة ثم أطلق الصوت */
+function settle(){
+ if(!E.on||!E.wait||!E.tmReady||au.readyState<1)return;
+ var t=(E.top&&E.a===1)?0:T(E.a)[0];
+ if(Math.abs(au.currentTime-t)>0.15)seekTo(t);
+ au.muted=false;E.wait=false;bar();
 }
 function startE(o){
- E.on=true;E.list=o.list;E.i=o.i||0;E.k=0;E.lp=0;E.tag=o.tag;E.ri=o.ri;E.cb=o.cb;
- E.full=!RC[o.ri].b;E.endF=o.endF||0;E.startF=o.startF||0;E.rep=(E.full&&!E.endF)?1:(o.rep||1);E.loops=o.loops||1;E.ca=0;
- load(true);
- if(!E.full)unlockPre();
-}
-function curIt(){return E.list[E.i]}
-function load(fresh){
- var it=curIt();E.seek=0;
- if(E.full&&fresh&&E.startF>0)E.seek=E.startF;
- try{pre.pause()}catch(e){}
- au.muted=false;au.src=url(it);au.defaultPlaybackRate=spd;au.playbackRate=spd;safePlay();
- prepNext();
- emit(true);
-}
-function onMeta(){
- if(this!==au)return;
- if(E.seek>0&&isFinite(au.duration)){try{au.currentTime=Math.max(0,au.duration*E.seek-1.5)}catch(e){}}
- E.seek=0;au.playbackRate=spd;
-}
-function emit(newItem){
- var it=curIt();
- if(E.cb&&it)E.cb(it,newItem);
- bar();
+ var tok=++E.tok,u=surl(o.ri,o.s);
+ E.on=true;E.s=o.s;E.a0=o.a0;E.a1=o.a1;E.a=o.a;E.k=0;E.rep=o.rep||1;E.ri=o.ri;E.tag=o.tag||"r";E.cb=o.cb;E.toEnd=!!o.toEnd;E.top=!!o.top;
+ E.tm=null;E.tmReady=false;E.wait=true;E.ld=true;
+ if(au.getAttribute("src")!==u)au.src=u;
+ au.muted=true;au.defaultPlaybackRate=spd;au.playbackRate=spd;
+ safePlay();
+ emit();
+ getTM(o.ri,o.s,function(t){if(tok!==E.tok)return;E.tm=t;E.tmReady=true;settle()});
 }
 function finish(msg){
- E.on=false;try{au.pause()}catch(e){}try{pre.pause()}catch(e){}
+ E.on=false;E.wait=false;try{au.pause()}catch(e){}au.muted=false;
  bar();if(msg)toast(msg);
  if(E.cb)E.cb(null,false);
 }
-/* الانتقال الفوري إلى العنصر الجاهز مسبقًا */
-function advance(){
- var n=nxt();
- if(!n){finish(E.list.length>1?"انتهت السورة":"");return}
- E.k=n.k;E.i=n.i;E.lp=n.lp;
- var u=url(E.list[E.i]);
- if(pre.getAttribute("src")!==u)pre.src=u;
- var old=au;au=pre;pre=old;
- try{old.pause()}catch(e){}
- try{au.currentTime=0}catch(e){}
- au.muted=false;au.playbackRate=spd;safePlay();
- prepNext();emit(false);
-}
-function onEnd(){
- if(this!==au||!E.on)return;
- if(E.full){finish("انتهت السورة");return}
- advance();
+function nextAyah(){
+ E.k++;
+ if(E.k<E.rep){seekTo(T(E.a)[0]);bar();return}
+ E.k=0;
+ if(E.a<E.a1){E.a++;emit();return}
+ finish(E.toEnd?"انتهت السورة":"");
 }
 setInterval(function(){
- if(!E.on||E.full||au.paused)return;
- var d=au.duration,t=au.currentTime;
- if(isFinite(d)&&d>0.4&&d-t<=0.09&&pre.readyState>=3)advance();
+ if(!E.on||E.wait||au.paused||au.seeking)return;
+ var t=au.currentTime,x=T(E.a),d=au.duration,en=x[1];
+ if(E.a>=CN[E.s-1]&&isFinite(d)&&d>0)en=Math.min(en,d);
+ if(t>=en-0.05){nextAyah();return}
+ if(t<x[0]-0.7||t>en+0.7){
+  var na=ayahAtTime(t);
+  if(na!==E.a){
+   E.k=0;E.a=na;
+   if(na<E.a0)E.a0=na;
+   if(na>E.a1){E.a1=CN[E.s-1];E.toEnd=true}
+   emit();
+  }
+ }
 },40);
+au.addEventListener("loadedmetadata",function(){au.playbackRate=spd;settle()});
+au.addEventListener("ended",function(){if(E.on&&!E.wait)finish("انتهت السورة")});
+au.addEventListener("waiting",function(){if(E.on){E.ld=true;bar()}});
+au.addEventListener("playing",function(){E.ld=false;bar()});
+au.addEventListener("play",bar);au.addEventListener("pause",bar);
+au.addEventListener("error",function(){if(au.getAttribute("src"))efail()});
 function step(d){
  if(!E.on)return;
- if(E.full)return;
- if(d<0&&au.currentTime>2.5){au.currentTime=0;E.k=0;emit(false);return}
- if(E.tag==="r"&&E.list.length===1){var c0=curIt(),na=c0[1]+d;if(na<1||na>CN[c0[0]-1])return;playAyah(c0[0],na,false);return}
- var n=E.i+d;
- if(n<0)return;
- if(n>=E.list.length){finish("انتهت السورة");return}
- E.i=n;E.k=0;load(false);
+ var na=E.a+d;if(na<1||na>CN[E.s-1])return;
+ if(E.a0===E.a1&&!E.toEnd){E.a0=E.a1=na}else{if(na<E.a0)E.a0=na;if(na>E.a1)E.a1=na}
+ E.a=na;E.k=0;E.top=false;
+ if(!E.wait){seekTo(T(na)[0]);if(au.paused)safePlay()}
+ emit();
 }
 function sk(d){if(!E.on)return;try{var t=au.currentTime+d,m=isFinite(au.duration)?au.duration-.2:1e9;au.currentTime=Math.max(0,Math.min(t,m))}catch(e){}}
-function stopE(){E.on=false;try{au.pause()}catch(e){}try{pre.pause()}catch(e){}bar();if(E.cb)E.cb(null,false)}
+function stopE(){E.on=false;E.wait=false;try{au.pause()}catch(e){}au.muted=false;bar();if(E.cb)E.cb(null,false)}
 
 /* زر الصوت العائم */
 function bar(){
  var b=$("qpl");b.hidden=!E.on;
- if(!E.on){$("qfp").hidden=true;mark();return}
- var it=curIt(),r=RC[E.ri].n;
- if(E.full){
-  $("qpt").textContent="سورة "+DN[it[0]-1]+" · تلاوة كاملة";
-  $("qpk").textContent=r;
- } else {
-  $("qpt").textContent="سورة "+DN[it[0]-1]+" · الآية "+AR(it[1]);
-  $("qpk").textContent=(E.rep>1?"التكرار "+AR(E.k+1)+" من "+AR(E.rep)+" · ":"")+r;
- }
- b.classList.toggle("qon",!au.paused);
+ if(!E.on){$("qfp").hidden=true;syncSheet();mark();return}
+ var r=RC[E.ri].n;
+ $("qpt").textContent="سورة "+DN[E.s-1]+" · الآية "+AR(E.a);
+ $("qpk").textContent=(E.rep>1?"التكرار "+AR(E.k+1)+" من "+AR(E.rep)+" · ":"")+r;
+ b.classList.toggle("qon",!au.paused&&!E.ld);
  $("qpz").textContent=au.paused?"▶":"⏸";
- mark();
+ syncSheet();mark();
 }
 function fabHide(){clearTimeout(fabHide.t);fabHide.t=setTimeout(function(){$("qfp").hidden=true},7000)}
 function fabTog(on){var p=$("qfp");p.hidden=on===undefined?!p.hidden:!on;if(!p.hidden)fabHide()}
 $("qfb").addEventListener("click",function(){fabTog()});
-A.forEach(function(a){
- a.addEventListener("play",function(){if(this===au)bar()});
- a.addEventListener("pause",function(){if(this===au)bar()});
- a.addEventListener("ended",onEnd);
- a.addEventListener("loadedmetadata",onMeta);
- a.addEventListener("error",function(){if(this===au&&au.getAttribute("src"))efail()});
- a.addEventListener("timeupdate",onTime);
-});
 $("qpx").addEventListener("click",stopE);
 $("qpz").addEventListener("click",function(){fabHide();if(au.paused)safePlay();else au.pause()});
 $("qrw").addEventListener("click",function(){fabHide();sk(-10)});
 $("qfw").addEventListener("click",function(){fabHide();sk(10)});
 var sr=$("qsk"),drag=false;
-function onTime(){
- if(this!==au)return;
+au.addEventListener("timeupdate",function(){
  if(!drag&&isFinite(au.duration)&&au.duration>0)sr.value=Math.round(au.currentTime/au.duration*1000);
- if(E.on&&E.full&&E.endF&&isFinite(au.duration)&&au.duration>0&&au.currentTime/au.duration>=E.endF){
-  E.k++;
-  if(E.k<E.rep){try{au.currentTime=Math.max(0,au.duration*E.startF-(E.startF>0?1.5:0))}catch(e){}emit(false)}else finish("");
-  return;
- }
- if(E.on&&E.track&&isFinite(au.duration)&&au.duration>0){
-  var it=curIt(),a=ayahAt(it[0],au.currentTime/au.duration);
-  if(a!==E.ca){E.ca=a;setPlaying(it[0],a);bar()}
- }
-}
+});
 sr.addEventListener("input",function(){drag=true;fabHide();if(isFinite(au.duration))au.currentTime=au.duration*sr.value/1000});
 sr.addEventListener("change",function(){drag=false});
 if("mediaSession" in navigator){try{
@@ -1136,51 +1187,72 @@ if("mediaSession" in navigator){try{
 /* ---------- القراءة بالصوت (المصحف) ---------- */
 function setPlaying(s,a){
  save(s,a);
+ if(!$("qsh").hidden&&E.on){shSel={s:s,a:a};shStart=false;shText(s,a)}
  if(rd.hidden)return;
  var p=pageOf(s,a);
  if(follow&&p!==cur)render(p,1);
  mark();
 }
-function cbR(it,isNew){if(!it){mark();return}if(E.full){E.ca=E.ca||it[1];setPlaying(it[0],E.ca)}else setPlaying(it[0],it[1])}
-function playAyah(s,a,toEnd){
+function cbR(it){if(!it){mark();return}setPlaying(it[0],it[1])}
+function playAyah(s,a,toEnd,top){
  s=clamp(s,1,114)|0;a=clamp(a,1,CN[s-1])|0;
  follow=true;
- var list=[],o={tag:"r",ri:rp,cb:cbR,loops:1,rep:rep};
- if(toEnd){for(var i=a;i<=CN[s-1];i++)list.push([s,i])}else list.push([s,a]);
- o.list=list;o.i=0;startE(o);E.toEnd=!!toEnd;
-}
-function playFull(s){
- follow=false;
- startE({list:[[s,1]],i:0,rep:1,loops:1,tag:"r",ri:ri,cb:null});E.toEnd=true;
+ startE({s:s,a0:a,a1:toEnd?CN[s-1]:a,a:a,rep:rep,ri:ri,tag:"r",cb:cbR,toEnd:!!toEnd,top:!!top});
 }
 function firstOnPage(){return rangeOf(cur)[0]}
 var cont=!!lg("qct",false);
 function drawRep(){
  var c=$("qrpc");c.textContent="";
- [1,2,3,4].forEach(function(v){var b=mk("button","chip"+(v===rep?" on":""),v===1?"بدون تكرار":"×"+AR(v));b.type="button";b.onclick=function(){rep=v;ls("qrp",rep);drawRep();if(E.on&&E.tag==="r"&&(!E.full||E.endF)){E.rep=rep;prepNext();bar()}};c.appendChild(b)});
+ [1,2,3,4].forEach(function(v){var b=mk("button","chip"+(v===rep?" on":""),v===1?"بدون تكرار":"×"+AR(v));b.type="button";b.onclick=function(){rep=v;ls("qrp",rep);drawRep();if(E.on&&E.tag==="r"){E.rep=rep;E.k=0;bar()}};c.appendChild(b)});
  var k=$("qcont");k.classList.toggle("on",cont);k.setAttribute("aria-pressed",cont?"true":"false");
 }
-$("qcont").addEventListener("click",function(){cont=!cont;ls("qct",cont);drawRep()});
-function drawIn(){var n=$("qin");if(n)n.hidden=!!RC[ri].b}
+$("qcont").addEventListener("click",function(){cont=!cont;ls("qct",cont);drawRep();if(E.on&&E.tag==="r"&&!E.toEnd&&cont){E.a1=CN[E.s-1];E.toEnd=true}});
 function setReciter(id,v){
- if(id==="qrec"){ri=v;ls("qr",ri);if(RC[v].b){rp=v;ls("qr2",rp);$("qrec2").value=rp}}
- else{rp=v;ls("qr2",rp);ri=v;ls("qr",ri);$("qrec").value=ri}
- drawIn();
+ ri=v;ls("qr",ri);$("qrec").value=v;$("qrec2").value=v;
+ if(E.on&&E.tag==="r"){
+  /* تبديل القارئ أثناء التشغيل: يكمل من نفس الآية */
+  startE({s:E.s,a0:E.a0,a1:E.a1,a:E.a,rep:E.rep,ri:ri,tag:"r",cb:E.cb,toEnd:E.toEnd,top:false});
+ }
 }
-RC.forEach(function(r,i){var o=mk("option","",r.n);o.value=i;$("qrec").appendChild(o);if(r.b){var o2=mk("option","",r.n);o2.value=i;$("qrec2").appendChild(o2)}});
-$("qrec").value=ri;$("qrec2").value=rp;
+RC.forEach(function(r,i){var o=mk("option","",r.n);o.value=i;$("qrec").appendChild(o);var o2=mk("option","",r.n);o2.value=i;$("qrec2").appendChild(o2)});
+$("qrec").value=ri;$("qrec2").value=ri;
 ["qrec","qrec2"].forEach(function(id){$(id).addEventListener("change",function(){setReciter(id,+$(id).value)})});
-drawIn();
 drawRep();
-$("qplp").addEventListener("click",function(){ov(false);var f=firstOnPage();playAyah(f[0],f[1],true)});
+$("qplp").addEventListener("click",function(){ov(false);var f=firstOnPage();playAyah(f[0],f[1],true,f[1]===1)});
 var shSel=null,shStart=false;
-function drawSn(){var n=$("qsn");if(n)n.hidden=true}
+function shText(s,a){
+ var t=$("qsa");t.textContent="";t.appendChild(document.createTextNode(Q[s-1][a-1]+" "));t.appendChild(mk("span","en",AR(a)));
+ $("qst").textContent=shStart?"سورة "+DN[s-1]+" من أولها":"سورة "+DN[s-1]+" · الآية "+AR(a);
+}
+function isCur(){return E.on&&shSel&&E.s===shSel.s&&E.a===shSel.a}
+function syncSheet(){
+ var pb=$("qplay");if(!pb)return;
+ pb.textContent=isCur()?(E.ld&&!au.paused?"…":au.paused?"▶":"⏸"):"▶";
+ var n=$("qsn");if(!n)return;
+ if(E.on&&!$("qsh").hidden){
+  n.hidden=false;
+  n.textContent=(E.ld&&!au.paused?"جاري تحميل التلاوة… · ":"")+(E.rep>1?"التكرار "+AR(E.k+1)+" من "+AR(E.rep)+" · ":"")+RC[E.ri].n;
+ } else n.hidden=true;
+}
 function openSheet(s,a,fromStart){
  shSel={s:s,a:a};shStart=!!fromStart;save(s,a);mark();
- $("qst").textContent=fromStart?"سورة "+DN[s-1]+" من أولها":"سورة "+DN[s-1]+" · الآية "+AR(a);
- $("qcont").hidden=false;drawRep();drawSn();$("qsh").hidden=false;
+ shText(s,a);
+ document.body.classList.add("qsho");
+ $("qcont").hidden=false;drawRep();syncSheet();$("qsh").hidden=false;$("qsa").scrollTop=0;
 }
-function closeSheet(){$("qsh").hidden=true}
+function closeSheet(){$("qsh").hidden=true;document.body.classList.remove("qsho");mark();syncSheet()}
+function shGo(d){
+ if(E.on&&E.tag==="r"&&isCur()){step(d);return}
+ if(!shSel)return;
+ var s=shSel.s,a=shSel.a+d;
+ if(a<1||a>CN[s-1])return;
+ shStart=false;
+ if(E.on&&E.tag==="r"){playAyah(s,a,E.toEnd||cont,false);var p0=pageOf(s,a);if(p0!==cur)render(p0,d>0?1:-1);shSel={s:s,a:a};shText(s,a);return}
+ openSheet(s,a,false);
+ var p=pageOf(s,a);if(p!==cur)render(p,d>0?1:-1);
+}
+$("qsv").addEventListener("click",function(){shGo(-1)});
+$("qsx").addEventListener("click",function(){shGo(1)});
 pg.addEventListener("click",function(e){
  var t=e.target;
  while(t&&t!==pg&&!(t.classList&&(t.classList.contains("ay")||t.classList.contains("sb"))))t=t.parentNode;
@@ -1192,7 +1264,11 @@ pg.addEventListener("click",function(e){
 rd.addEventListener("click",function(e){if(e.target===rd||e.target.className==="qinf"||e.target.id==="qhd"||e.target===$("qvw")){ov();fabTog(false)}});
 $("qcl").addEventListener("click",closeSheet);
 $("qsb").addEventListener("click",closeSheet);
-$("qplay").addEventListener("click",function(){if(!shSel)return;closeSheet();playAyah(shSel.s,shSel.a,cont||shStart)});
+$("qplay").addEventListener("click",function(){
+ if(!shSel)return;
+ if(isCur()){if(au.paused)safePlay();else au.pause();syncSheet();return}
+ playAyah(shSel.s,shSel.a,cont||shStart,shStart);syncSheet();
+});
 
 /* ---------- الفهرس والبحث ---------- */
 function filter(){
@@ -1224,7 +1300,7 @@ function submit(){
 $("qs").addEventListener("input",filter);
 $("qs").addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();submit()}});
 $("qgo").addEventListener("click",submit);
-SB.forEach(function(b){b.addEventListener("click",function(){var s=+b.getAttribute("data-s");openAt(s,1);if(!RC[ri].b)playFull(s)})});
+SB.forEach(function(b){b.addEventListener("click",function(){var s=+b.getAttribute("data-s");openAt(s,1)})});
 $("qres").addEventListener("click",function(){var r=lg("qp",null);if(r)openAt(r.s,r.a)});
 $("qbk").addEventListener("click",function(){show(idx)});
 (function(){var j=$("qjz");for(var i=1;i<=30;i++){var o=mk("option","","الجزء "+AR(i));o.value=JZ[i-1]||1;j.appendChild(o)}
