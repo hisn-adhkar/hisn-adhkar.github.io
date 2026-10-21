@@ -669,6 +669,28 @@ body.qsho .qfab{display:none!important}
 #qpg .qt{position:relative;isolation:isolate}
 #qpg .hlr{position:absolute;z-index:-1;border-radius:8px;background:rgba(72,100,140,.2);pointer-events:none}
 .qver{display:block;text-align:center;color:var(--mut);font:500 .62rem Tajawal,sans-serif;opacity:.7;margin:2px 0 8px}
+
+/* v30: بطاقة الآية تتبع الوضع الفاتح/الداكن */
+.qshb{--k-bg:#f3f7fb;--k-tx:#24445f;--k-mut:#5d7389;--k-chip:#fff;--k-line:#d3dde8;--k-acc:#1f6fb2;--k-acctx:#fff;--k-acc2:#eef5fc;--k-ctr:rgba(110,145,185,.17);--k-btn:#e3eaf2;--k-play:#fff;--k-playtx:#0b5a4a;--k-enbg:#eaf4f8;--k-en:#1d5d7a;--k-grip:#b9c4d0;--k-txt:#2d4a63}
+:root[data-theme="dark"] .qshb{--k-bg:#0f2c26;--k-tx:#e8f2ee;--k-mut:#a9c4bb;--k-chip:#1d4b41;--k-line:#33685b;--k-acc:#c9a24a;--k-acctx:#0b3d36;--k-acc2:#21544a;--k-ctr:rgba(255,255,255,.08);--k-btn:#1d4b41;--k-play:#f4dd9c;--k-playtx:#0b3d36;--k-enbg:#1d4b41;--k-en:#f4dd9c;--k-grip:#33685b;--k-txt:#f1f6f3}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .qshb{--k-bg:#0f2c26;--k-tx:#e8f2ee;--k-mut:#a9c4bb;--k-chip:#1d4b41;--k-line:#33685b;--k-acc:#c9a24a;--k-acctx:#0b3d36;--k-acc2:#21544a;--k-ctr:rgba(255,255,255,.08);--k-btn:#1d4b41;--k-play:#f4dd9c;--k-playtx:#0b3d36;--k-enbg:#1d4b41;--k-en:#f4dd9c;--k-grip:#33685b;--k-txt:#f1f6f3}}
+.qshb{background:var(--k-bg)!important;color:var(--k-tx)!important;transition:background .25s,color .25s}
+.qgrip{background:var(--k-grip)!important}
+.qsh2 h3{color:var(--k-tx)!important}
+.qdn{background:var(--k-btn)!important;color:var(--k-tx)!important}
+.qsa{color:var(--k-txt)!important}
+.qsa .en{background:var(--k-enbg)!important;color:var(--k-en)!important;border-color:var(--k-en)!important}
+.qsn,.qshb .lbl{color:var(--k-mut)!important}
+.qctr{background:var(--k-ctr)!important}
+.qctr .cb{color:var(--k-acc)!important}
+.qctr .cp{background:var(--k-play)!important;color:var(--k-playtx)!important}
+.qshb .chip{background:var(--k-chip)!important;border-color:var(--k-line)!important;color:var(--k-tx)!important}
+.qshb .chip.on{background:var(--k-acc)!important;border-color:var(--k-acc)!important;color:var(--k-acctx)!important}
+.qshb .qchk{background:var(--k-chip)!important;border-color:var(--k-line)!important;color:var(--k-mut)!important}
+.qshb .qchk.on{background:var(--k-acc2)!important;border-color:var(--k-acc)!important;color:var(--k-acc)!important}
+.qshb .qchk.on i{background:var(--k-acc)!important;border-color:var(--k-acc)!important;color:var(--k-acctx)!important}
+.qshb .rrow label{color:var(--k-tx)!important}
+.qshb .rrow select{background:var(--k-chip)!important;color:var(--k-tx)!important;border-color:var(--k-line)!important}
 </style>
 </head>
 <body>
@@ -688,7 +710,7 @@ body.qsho .qfab{display:none!important}
 <div id="qsh" class="qsh" hidden><div class="qsb" id="qsb"></div><div class="qshb"><div class="qgrip"></div><div class="qsh2"><h3 id="qst"></h3><button type="button" id="qcl" class="qdn" aria-label="إنزال البطاقة (يستمر الصوت)">⌄</button></div><div class="qsa" id="qsa"></div><div class="qsn" id="qsn" hidden></div><div class="qctr"><button type="button" id="qsx" class="cb" aria-label="الآية التالية">◀◀</button><button type="button" id="qplay" class="cp" aria-label="استماع">▶</button><button type="button" id="qsv" class="cb" aria-label="الآية السابقة">▶▶</button></div><div class="lbl">🔁 تكرار الآية</div><div class="chips" id="qrpc"></div><button type="button" id="qcont" class="qchk" aria-pressed="false"><i>✓</i> متابعة الآيات التالية بعد انتهاء التكرار</button><div class="rrow"><label for="qrec2">🎙️ القارئ</label><select id="qrec2" aria-label="القارئ"></select></div></div></div>
 <div id="qpl" class="qfab" hidden><div class="qfp" id="qfp" hidden><div class="qpi"><b id="qpt"></b><small id="qpk"></small></div><div class="qpc"><button type="button" id="qpx" class="qx" aria-label="إنهاء التشغيل">✕</button><button type="button" id="qrw" class="sk" aria-label="رجوع عشر ثوان">⏪<small>١٠</small></button><button type="button" id="qpz" class="pz" aria-label="إيقاف مؤقت">⏸</button><button type="button" id="qfw" class="sk" aria-label="تقديم عشر ثوان">⏩<small>١٠</small></button></div><input type="range" id="qsk" class="qsk" min="0" max="1000" value="0" aria-label="موضع التشغيل"></div><button type="button" id="qfb" class="qfb" aria-label="التحكم بالصوت"><span class="wv"><i></i><i></i><i></i><i></i><i></i></span></button></div>
 <div class="qtt" id="qtt" hidden></div></main></section><section class="page" id="tasbeeh"><main><div class="top"><a class="back" href="#">→ الرئيسية</a><h2>📿 المسبحة الإلكترونية</h2></div><div class="tsb" id="tsb"><div class="chips" id="tch"><button type="button" class="chip on" data-i="0" data-t="سُبْحَانَ اللَّهِ">سبحان الله</button><button type="button" class="chip" data-i="1" data-t="الْحَمْدُ لِلَّهِ">الحمد لله</button><button type="button" class="chip" data-i="2" data-t="اللَّهُ أَكْبَرُ">الله أكبر</button><button type="button" class="chip" data-i="3" data-t="لَا إِلَهَ إِلَّا اللَّهُ">لا إله إلا الله</button><button type="button" class="chip" data-i="4" data-t="أَسْتَغْفِرُ اللَّهَ">أستغفر الله</button><button type="button" class="chip" data-i="5" data-t="اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ">الصلاة على النبي</button><button type="button" class="chip" data-i="6" data-t="لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ">لا حول ولا قوة</button><button type="button" class="chip" data-i="7" data-t="سُبْحَانَ اللَّهِ وَبِحَمْدِهِ">سبحان الله وبحمده</button><button type="button" class="chip" data-i="8" data-t="">ذكر حر</button></div><div class="tz" id="tz">سُبْحَانَ اللَّهِ</div><button type="button" class="tb" id="tb" aria-label="عدّ"><span id="tn">٠</span><small id="tg"></small></button><div class="chips tgs" id="tgc"><button type="button" class="chip on" data-g="0">بلا حد</button><button type="button" class="chip" data-g="33">٣٣</button><button type="button" class="chip" data-g="99">٩٩</button><button type="button" class="chip" data-g="100">١٠٠</button></div><div class="tst"><div><b id="tr">٠</b><span>دورات</span></div><div><b id="tt">٠</b><span>الإجمالي</span></div></div><div class="tlog"><div class="tl3"><div><b id="tld">٠</b><span>تسبيح اليوم</span></div><div><b id="tlw">٠</b><span>آخر ٧ أيام</span></div></div><div class="tbars" id="tlb"></div></div><button type="button" class="rs" id="trs">تصفير العدّاد</button></div></main></section><section class="page" id="prayer"><main><div class="top"><a class="back" href="#">→ الرئيسية</a><h2>🕰️ أوقات الصلاة</h2></div><div id="pt" class="pt"><div class="pick"><label for="pcity">اختر مدينتك</label><select id="pcity"><option value="">— اختر المدينة —</option><option value="c0" data-la="24.7136" data-lo="46.6753">الرياض</option><option value="c1" data-la="21.4858" data-lo="39.1925">جدة</option><option value="c2" data-la="21.3891" data-lo="39.8579">مكة المكرمة</option><option value="c3" data-la="24.4672" data-lo="39.6111">المدينة المنورة</option><option value="c4" data-la="26.4207" data-lo="50.0888">الدمام</option><option value="c5" data-la="26.2172" data-lo="50.1971">الخبر</option><option value="c6" data-la="26.2361" data-lo="50.0393">الظهران</option><option value="c7" data-la="25.3648" data-lo="49.5875">الهفوف</option><option value="c8" data-la="26.5196" data-lo="50.0115">القطيف</option><option value="c9" data-la="27.0046" data-lo="49.646">الجبيل</option><option value="c10" data-la="28.4328" data-lo="45.9708">حفر الباطن</option><option value="c11" data-la="24.1556" data-lo="47.312">الخرج</option><option value="c12" data-la="26.326" data-lo="43.975">بريدة</option><option value="c13" data-la="26.084" data-lo="43.994">عنيزة</option><option value="c14" data-la="27.5114" data-lo="41.7208">حائل</option><option value="c15" data-la="28.3835" data-lo="36.5662">تبوك</option><option value="c16" data-la="21.2703" data-lo="40.4158">الطائف</option><option value="c17" data-la="24.0895" data-lo="38.0618">ينبع</option><option value="c18" data-la="18.2164" data-lo="42.5053">أبها</option><option value="c19" data-la="18.3093" data-lo="42.7292">خميس مشيط</option><option value="c20" data-la="17.4917" data-lo="44.1322">نجران</option><option value="c21" data-la="16.8892" data-lo="42.5511">جازان</option><option value="c22" data-la="20.0129" data-lo="41.4677">الباحة</option><option value="c23" data-la="29.9697" data-lo="40.2064">سكاكا</option><option value="c24" data-la="30.9753" data-lo="41.0381">عرعر</option></select></div><div class="note" id="pst">اختر مدينتك لعرض أوقات الصلاة.</div><div id="pl" class="pl"></div><p class="pnote">🔒 لا نطلب موقعك. تُستخدم المدينة التي تختارها فقط لحساب الأوقات عبر خدمة Aladhan، وتُحفظ على جهازك وحده.</p></div></main></section>
-<footer><small class="qver">الإصدار ٢٩</small><div class="sig"><span>معاذ الحجي</span><svg viewBox="0 0 178 62" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6512"/><stop offset=".35" stop-color="#d9b24a"/><stop offset=".55" stop-color="#f6e4a0"/><stop offset=".8" stop-color="#c9962f"/><stop offset="1" stop-color="#8a6512"/></linearGradient></defs><path class="f" d="M46 51 C4 47 -4 13 44 7 C102 -1 176 3 174 24 C173 37 152 40 132 35 C150 36 170 33 170 24 C171 7 100 3 44 10 C6 16 10 44 46 51 Z"/><path class="l" d="M50 57 C80 51 120 51 154 55"/><path class="f" d="M160 55 l4 -3.5 l4 3.5 l-4 3.5 z"/><circle class="f" cx="44" cy="51" r="2.2"/></svg></div></footer>
+<footer><small class="qver">الإصدار ٣٠</small><div class="sig"><span>معاذ الحجي</span><svg viewBox="0 0 178 62" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a6512"/><stop offset=".35" stop-color="#d9b24a"/><stop offset=".55" stop-color="#f6e4a0"/><stop offset=".8" stop-color="#c9962f"/><stop offset="1" stop-color="#8a6512"/></linearGradient></defs><path class="f" d="M46 51 C4 47 -4 13 44 7 C102 -1 176 3 174 24 C173 37 152 40 132 35 C150 36 170 33 170 24 C171 7 100 3 44 10 C6 16 10 44 46 51 Z"/><path class="l" d="M50 57 C80 51 120 51 154 55"/><path class="f" d="M160 55 l4 -3.5 l4 3.5 l-4 3.5 z"/><circle class="f" cx="44" cy="51" r="2.2"/></svg></div></footer>
 <script>
 const IB="https://cdn.mp3quran.net/audio/idrees-abkar/r1/",EA="https://everyayah.com/data/Alafasy_128kbps/";
 const SUR={"qf":1,"i":112,"f":113,"n":114,"kf":109,"mulk":67,"pi":112,"pf":113,"pn":114};const AY={"k":[2,255,255],"b":[2,285,286],"qb":[2,1,5],"qr":[7,117,122],"qy":[10,81,82],"qt":[20,69,69],"qm":[23,115,118],"qmm":[23,97,98],"qs":[37,1,10],"qh":[59,21,24],"qi":[17,82,82],"qyy":[10,57,57],"qsh":[26,80,80],"q51":[9,51,51],"q129":[9,129,129],"pk":[2,255,255],"wk5":[3,190,200],"wk20":[20,25,26]};
@@ -862,14 +884,14 @@ function clamp(v,a,b){v=+v;if(!isFinite(v))v=a;return Math.min(b,Math.max(a,v))}
 /* ---------- القرّاء ---------- */
 var RC=[
  {n:"عبدالرحمن السديس",r:54,f:"abdulrahman-sudais/r1/"},
- {n:"ماهر المعيقلي",r:133,f:"maher-muaiqly/r3/"},
- {n:"إدريس أبكر",r:12,f:"idrees-abkar/r1/"},
  {n:"مشاري العفاسي",r:123,f:"mishary-alafasy/r1/"},
+ {n:"ماهر المعيقلي (المصحف المجوّد)",r:133,f:"maher-muaiqly/r3/"},
  {n:"سعود الشريم",r:31,f:"saud-shuraim/r1/"},
  {n:"صلاح البدير",r:43,f:"salah-budair/r1/"},
  {n:"ياسر الدوسري",r:92,f:"yasser-dosari/r1/"},
  {n:"عبدالله عواد الجهني",r:62,f:"abdullah-juhani/r1/"},
- {n:"بندر بليلة",r:217,f:"bandar-baleela/r1/"}
+ {n:"بندر بليلة",r:217,f:"bandar-baleela/r1/"},
+ {n:"إدريس أبكر",r:12,f:"idrees-abkar/r1/"}
 ];
 var SB=[].slice.call(root.querySelectorAll(".sr"));
 var NM=SB.map(function(b){return b.getAttribute("data-nm")});
@@ -878,7 +900,12 @@ var CN=SB.map(function(b){return +b.getAttribute("data-c")});
 var Q=null;
 if(QD&&QD.length===114){var okq=true;for(var qi=0;qi<114;qi++){if(!Array.isArray(QD[qi])||QD[qi].length!==CN[qi]){okq=false;break}}if(okq)Q=QD}
 QD=null;
-var ri=clamp(lg("qr",0),0,RC.length-1)|0;
+var ri=0;
+(function(){
+ var sid=lg("qr3",null),old=[54,133,12,123,31,43,92,62,217],i;
+ if(sid==null){var o=lg("qr",0);sid=old[clamp(o,0,old.length-1)|0]}
+ for(i=0;i<RC.length;i++)if(RC[i].r===sid){ri=i;break}
+})();
 var rep=lg("qrp",1);if([1,2,3,4].indexOf(rep)<0)rep=1;
 var fs=clamp(lg("qfs",2),0,4)|0;
 var cur=1,pos=null,follow=true;
@@ -1043,7 +1070,7 @@ function openPage(p){show(rd);var f=rangeOf(clamp(p,1,604)|0)[0];save(f[0],f[1])
 /* ---------- محرك الصوت: ملف السورة كاملًا بلا انقطاع، مع توقيت كل آية للتظليل والتكرار ---------- */
 var au=new Audio(),spd=1;
 au.preload="auto";
-var E={on:false,s:1,a0:1,a1:1,a:1,k:0,rep:1,ri:0,tag:"r",cb:null,toEnd:false,tm:null,tmReady:false,wait:false,tok:0,top:false,ld:false};
+var E={on:false,s:1,a0:1,a1:1,a:1,k:0,rep:1,ri:0,tag:"r",cb:null,toEnd:false,tm:null,tmReady:false,wait:false,tok:0,top:false,ld:false,goal:null,gn:0,gt:0};
 var WC={};
 function W(s){
  if(WC[s])return WC[s];
@@ -1095,14 +1122,20 @@ function emit(){if(E.cb)E.cb(curIt(),true);bar()}
 /* بعد وصول الأزمنة وبيانات الملف: اذهب إلى الآية المطلوبة ثم أطلق الصوت */
 function settle(){
  if(!E.on||!E.wait||!E.tmReady||au.readyState<1)return;
- var t=(E.top&&E.a===1)?0:T(E.a)[0];
- if(Math.abs(au.currentTime-t)>0.15)seekTo(t);
- au.muted=false;E.wait=false;bar();
+ if(E.goal==null){E.goal=(E.top&&E.a===1)?0:T(E.a)[0];E.gn=0;E.gt=0}
+ reach();
+}
+/* iOS (وخصوصًا بعد الإضافة للشاشة الرئيسية) قد يتجاهل الانتقال قبل جاهزية الملف، فنعيد المحاولة حتى نتأكد من الوصول للآية */
+function reach(){
+ var g=E.goal;if(g==null)return;
+ if(g<0.1||(Math.abs(au.currentTime-g)<0.8&&au.readyState>=2)){E.goal=null;E.wait=false;au.muted=false;bar();return}
+ if(E.gn<80){E.gn++;seekTo(g)}
+ else{E.goal=null;E.wait=false;au.muted=false;toast("تعذّر الانتقال إلى الآية المحددة على هذا الجهاز")}
 }
 function startE(o){
  var tok=++E.tok,u=surl(o.ri,o.s);
  E.on=true;E.s=o.s;E.a0=o.a0;E.a1=o.a1;E.a=o.a;E.k=0;E.rep=o.rep||1;E.ri=o.ri;E.tag=o.tag||"r";E.cb=o.cb;E.toEnd=!!o.toEnd;E.top=!!o.top;
- E.tm=null;E.tmReady=false;E.wait=true;E.ld=true;
+ E.tm=null;E.tmReady=false;E.wait=true;E.ld=true;E.goal=null;E.gn=0;E.gt=0;
  if(au.getAttribute("src")!==u)au.src=u;
  au.muted=true;au.defaultPlaybackRate=spd;au.playbackRate=spd;
  safePlay();
@@ -1122,6 +1155,7 @@ function nextAyah(){
  finish(E.toEnd?"انتهت السورة":"");
 }
 setInterval(function(){
+ if(E.on&&E.wait&&E.tmReady&&E.goal!=null){if(Date.now()-E.gt>250){E.gt=Date.now();reach()}return}
  if(!E.on||E.wait||au.paused||au.seeking)return;
  var t=au.currentTime,x=T(E.a),d=au.duration,en=x[1];
  if(E.a>=CN[E.s-1]&&isFinite(d)&&d>0)en=Math.min(en,d);
@@ -1137,6 +1171,7 @@ setInterval(function(){
  }
 },40);
 au.addEventListener("loadedmetadata",function(){au.playbackRate=spd;settle()});
+["canplay","loadeddata","durationchange","seeked"].forEach(function(n){au.addEventListener(n,function(){if(E.on&&E.wait)settle()})});
 au.addEventListener("ended",function(){if(E.on&&!E.wait)finish("انتهت السورة")});
 au.addEventListener("waiting",function(){if(E.on){E.ld=true;bar()}});
 au.addEventListener("playing",function(){E.ld=false;bar()});
@@ -1208,7 +1243,7 @@ function drawRep(){
 }
 $("qcont").addEventListener("click",function(){cont=!cont;ls("qct",cont);drawRep();if(E.on&&E.tag==="r"&&!E.toEnd&&cont){E.a1=CN[E.s-1];E.toEnd=true}});
 function setReciter(id,v){
- ri=v;ls("qr",ri);$("qrec").value=v;$("qrec2").value=v;
+ ri=v;ls("qr3",RC[ri].r);$("qrec").value=v;$("qrec2").value=v;
  if(E.on&&E.tag==="r"){
   /* تبديل القارئ أثناء التشغيل: يكمل من نفس الآية */
   startE({s:E.s,a0:E.a0,a1:E.a1,a:E.a,rep:E.rep,ri:ri,tag:"r",cb:E.cb,toEnd:E.toEnd,top:false});
